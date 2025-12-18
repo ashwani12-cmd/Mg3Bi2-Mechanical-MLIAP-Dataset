@@ -1,2 +1,120 @@
 # Mg3Bi2-Mechanical-MLIAP-Dataset
-Mechanical training dataset for ML interatomic potentials of Mg₃Bi₂ under pressure and strain.
+
+This repository contains a curated dataset of mechanically perturbed **Mg₃Bi₂** atomic configurations
+designed for **machine-learning interatomic potential (MLIAP / SNAP) training** and for studying
+mechanical response under **pressure, strain, and atomic disorder**.
+
+The dataset intentionally excludes equilibrium (unperturbed) structures and focuses exclusively on
+**nonlinear mechanical regimes**, ensuring robustness and transferability of trained interatomic potentials.
+
+---
+
+## Important Note on Dataset Design
+
+The file `Mg3Bi2_1_GPa.json` is intentionally excluded.
+
+This dataset is **not intended for equation-of-state (EOS) fitting**.  
+All configurations include one or more of the following perturbations:
+hydrostatic pressure, lattice strain, and/or random atomic displacement.
+
+---
+
+## Dataset Categorization
+
+### Category A: Pressure + Atomic Displacement (No Lattice Strain)
+
+Files:  
+Mg3Bi2_1_GPa_0.3_disp.json, Mg3Bi2_3_GPa_0.3_disp.json,  
+Mg3Bi2_5_GPa_0.3_disp.json, Mg3Bi2_7_GPa_0.3_disp.json
+
+Description:  
+Hydrostatic pressure (1–7 GPa) is applied while keeping lattice vectors fixed, with a random atomic
+displacement amplitude of 0.3 Å.
+
+Role in ML training:  
+Provides anchor force data under compression and stabilizes high-pressure molecular dynamics.
+
+---
+
+### Category B: Pressure + Atomic Displacement + Lattice Strain (Core Dataset)
+
+Files follow the naming convention:  
+`Mg3Bi2_<pressure>_GPa_0.3_disp_<strain>_pct.json`
+
+Coverage:
+- 1 GPa with 3%, 5%, 7%, 9% strain
+- 3 GPa with 1%, 3%, 5%, 7%, 9% strain
+- 5 GPa with 1%, 3%, 5%, 7%, 9% strain
+- 7 GPa with 1%, 3%, 5%, 7%, 9% strain
+
+Description:  
+This category captures the full coupling between hydrostatic pressure, lattice deformation, and
+atomic disorder, spanning elastic to near-failure regimes.
+
+Role in ML training:  
+This is the **most important category** for preventing extrapolation failures and ensuring robustness
+under combined mechanical loading. Extreme cases should be moderately down-weighted.
+
+---
+
+### Category C: Lattice Strain + Atomic Displacement (No Pressure)
+
+Files follow the naming convention:  
+`Mg3Bi2_<strain>_pct_<disp>_disp.json`
+
+Coverage:
+- Strain levels: 1%, 3%, 5%, 7%, 9%
+- Atomic displacement amplitudes: 0.2 Å and 0.3 Å
+- No applied pressure
+
+Description:  
+Uniform lattice deformation is applied at ambient pressure together with random atomic displacements.
+
+Role in ML training:  
+Defines elastic constants, nonlinear strain response, and low-pressure mechanical stability.
+High importance for accurate elastic behavior.
+
+---
+
+### Category D: Atomic Displacement Only
+
+Files:  
+Mg3Bi2_pct_0.2_disp.json, Mg3Bi2_pct_0.3_disp.json
+
+Description:  
+Only atomic positions are perturbed within the ideal lattice, without pressure or strain.
+
+Role in ML training:  
+Provides clean force–displacement anchors and should be assigned high training weight.
+
+---
+
+### Category E: Directional (Uniaxial) Strain
+
+Files:  
+strain_x.json, strain_y.json, strain_z.json
+
+Description:  
+Strain is applied along a single Cartesian direction without random atomic displacement.
+
+Role in ML training:  
+Critical for learning directional elastic constants, mechanical anisotropy, and stress symmetry.
+These configurations should be weighted very high.
+
+---
+
+## Data Management
+
+All JSON files are tracked using **Git Large File Storage (Git LFS)**.  
+Total dataset size is approximately **284 MB**, while the repository remains lightweight through LFS pointers.
+
+---
+
+## Intended Use
+
+- SNAP / MLIAP training
+- Mechanical deformation studies
+- Pressure-dependent molecular dynamics
+- Robust machine-learning interatomic potential development
+
+
