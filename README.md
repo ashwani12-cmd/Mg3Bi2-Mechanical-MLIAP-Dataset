@@ -23,6 +23,8 @@ hydrostatic pressure, lattice strain, and/or random atomic displacement.
 
 ### Category A: Pressure + Atomic Displacement (No Lattice Strain)
 
+**Data location:** `data/pressure_disp/`
+
 Files:  
 Mg3Bi2_1_GPa_0.3_disp.json, Mg3Bi2_3_GPa_0.3_disp.json,  
 Mg3Bi2_5_GPa_0.3_disp.json, Mg3Bi2_7_GPa_0.3_disp.json
@@ -37,6 +39,8 @@ Provides anchor force data under compression and stabilizes high-pressure molecu
 ---
 
 ### Category B: Pressure + Atomic Displacement + Lattice Strain (Core Dataset)
+
+**Data location:** `data/pressure_strain_disp/`
 
 Files follow the naming convention:  
 `Mg3Bi2_<pressure>_GPa_0.3_disp_<strain>_pct.json`
@@ -59,6 +63,8 @@ under combined mechanical loading. Extreme cases should be moderately down-weigh
 
 ### Category C: Lattice Strain + Atomic Displacement (No Pressure)
 
+**Data location:** `data/strain_disp/`
+
 Files follow the naming convention:  
 `Mg3Bi2_<strain>_pct_<disp>_disp.json`
 
@@ -78,6 +84,8 @@ High importance for accurate elastic behavior.
 
 ### Category D: Atomic Displacement Only
 
+**Data location:** `data/disp_only/`
+
 Files:  
 Mg3Bi2_pct_0.2_disp.json, Mg3Bi2_pct_0.3_disp.json
 
@@ -90,6 +98,8 @@ Provides clean force–displacement anchors and should be assigned high training
 ---
 
 ### Category E: Directional (Uniaxial) Strain
+
+**Data location:** `data/uniaxial_strain/`
 
 Files:  
 strain_x.json, strain_y.json, strain_z.json
