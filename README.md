@@ -11,7 +11,6 @@ The dataset intentionally excludes equilibrium (unperturbed) structures and focu
 
 ## Important Note on Dataset Design
 
-The file `Mg3Bi2_1_GPa.json` is intentionally excluded.
 
 This dataset is **not intended for equation-of-state (EOS) fitting**.  
 All configurations include one or more of the following perturbations:
