@@ -4,8 +4,8 @@ This repository contains a curated dataset of mechanically perturbed **Mg‚ÇÉBi‚Ç
 designed for **machine-learning interatomic potential (MLIAP / SNAP) training** and for studying
 mechanical response under **pressure, strain, and atomic disorder**.
 
-The dataset intentionally excludes equilibrium (unperturbed) structures and focuses exclusively on
-**nonlinear mechanical regimes**, ensuring robustness and transferability of trained interatomic potentials.
+The dataset primarily focuses on nonlinear mechanical regimes; however, it also includes equilibrium (0% strain) reference structures within the uniaxial strain datasets to ensure consistency and accurate learning of elastic responses.
+
 
 ---
 
