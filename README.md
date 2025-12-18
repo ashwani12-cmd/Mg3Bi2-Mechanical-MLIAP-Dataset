@@ -95,11 +95,15 @@ Files:
 strain_x.json, strain_y.json, strain_z.json
 
 Description:  
-Strain is applied along a single Cartesian direction without random atomic displacement.
+Uniaxial strain is applied along a single Cartesian direction (x, y, or z) without random atomic
+displacement. For each direction, the strain spans from **−10% to +10%** in increments of **2%**,
+covering both compressive and tensile regimes.
 
 Role in ML training:  
-Critical for learning directional elastic constants, mechanical anisotropy, and stress symmetry.
-These configurations should be weighted very high.
+These configurations are critical for learning directional elastic constants, mechanical anisotropy,
+and stress–strain symmetry. They should be assigned **very high training weight**, especially for
+accurate elastic tensor prediction.
+
 
 ---
 
