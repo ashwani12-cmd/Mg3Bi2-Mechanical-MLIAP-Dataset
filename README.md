@@ -45,7 +45,7 @@ Files follow the naming convention:
 `Mg3Bi2_<pressure>_GPa_0.3_disp_<strain>_pct.json`
 
 Coverage:
-- 1 GPa with 3%, 5%, 7%, 9% strain
+- 1 GPa with 1%  3%, 5%, 7%, 9% strain
 - 3 GPa with 1%, 3%, 5%, 7%, 9% strain
 - 5 GPa with 1%, 3%, 5%, 7%, 9% strain
 - 7 GPa with 1%, 3%, 5%, 7%, 9% strain
