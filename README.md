@@ -6,6 +6,69 @@ mechanical response under **pressure, strain, and atomic disorder**.
 
 The dataset primarily focuses on nonlinear mechanical regimes; however, it also includes equilibrium (0% strain) reference structures within the uniaxial strain datasets to ensure consistency and accurate learning of elastic responses.
 
+## Data (`data/`)
+
+This directory contains the **physics-organized raw Mg₃Bi₂ atomic configurations**, grouped according to distinct **mechanical deformation protocols**, including:
+
+- Atomic displacement
+- Lattice strain
+- Hydrostatic pressure
+- Combined pressure–strain loading
+- Uniaxial deformation
+
+Each subfolder preserves the **physical meaning and generation logic** of the configurations, enabling clear interpretation of how different mechanical perturbations affect atomic structures, forces, and stresses.
+
+These raw datasets serve as the **foundational source** from which all ML-ready formats are derived. This organization ensures:
+
+- Full **transparency** in data generation
+- Clear **traceability** between physical deformation modes and ML training data
+- Consistent linkage between **mechanical physics** and **machine-learning model inputs**
+
+
+## Dataset (`dataset/`)
+
+This directory contains **machine-learning–ready datasets** derived from curated **Mg₃Bi₂ atomic configurations**, formatted for direct use with multiple machine-learning interatomic potential frameworks, including:
+
+- **MTP / MLIP**
+- **DeepMD**
+- **XYZ-based models** (e.g., GPUMD / NEP)
+
+The datasets are provided in the following formats:
+
+- `.cfg`
+- Extended `.xyz`
+- DeepMD-compatible `.json`
+
+All formats contain **identical atomic environments**, including energies, forces, and stresses. This guarantees:
+
+- Fair **cross-framework benchmarking**
+- Fully **reproducible training**
+- Consistent evaluation of **elastic and nonlinear mechanical properties**
+- Elimination of **format-dependent bias**
+
+---
+
+## Scripts (`scripts/`)
+
+This directory contains **conversion and preprocessing scripts and notebooks** used to transform physics-organized raw data into ML-ready datasets compatible with different training pipelines.
+
+The tools in this folder:
+
+- Enable **transparent and loss-free conversion** between:
+  - CFG
+  - XYZ
+  - DeepMD JSON formats
+- Document the **exact workflow** used to generate:
+  - Training datasets
+  - Validation datasets
+  - Test datasets
+
+These scripts support:
+
+- Full **reproducibility**
+- Future **dataset extension**
+- Consistent reuse across different **machine-learning interatomic potential models**
+
 
 ---
 
