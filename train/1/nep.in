@@ -1,0 +1,14 @@
+version       4       # default
+type          2  Mg Bi 
+cutoff        7 4     # default
+n_max         6 6     # default
+basis_size    8 8     # default
+l_max         4 2 0   # default
+neuron        50      # default
+lambda_e      1.0     # default
+lambda_f      1.0     # default
+lambda_v      0.1     # default
+batch         1000    # default
+zbl           2.5
+population    50      # default
+generation    300000
