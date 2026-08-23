@@ -30,6 +30,7 @@ Mg3Bi2-Mechanical-MLIAP-Dataset/
 │   ├── mtp/                     train.cfg, val.cfg   (MLIP-2)
 │   └── deepmd/                  train/, val/         (per-category .npy systems)
 ├── scripts/                     MTP_xyz_format.ipynb — format conversion
+│                                make_displaced.py    — configuration generator (QE)
 ├── train/                       NEP training run: nep.in, nep.txt, loss.out, submit.sh
 ├── figures/                     (empty — placeholder)
 ├── validation/                  (empty — placeholder)
@@ -44,21 +45,21 @@ Directories marked *placeholder* are currently empty.
 
 ## Data (`data/`)
 
-Raw, physics-organized configurations grouped by deformation protocol. **4128 configurations**
-across 13 categories:
+Raw, physics-organized configurations grouped by deformation protocol. **5064 configurations**
+across 12 categories:
 
 | Category | Configs | Description |
 |---|---|---|
-| `pressure_strain_disp/` | 1000 | pressure 1–7 GPa × strain 1–9 % × 0.3 Å displacement |
+| `strain_disp/` | 1425 | strain 1/3/5/7/9 % × displacement 0.2 Å and 0.3 Å (1000); plus a T/P-grid lattice set with random displacement (425) |
+| `disp_only/` | 1000 | random displacement at the equilibrium cell, 0.2 Å and 0.3 Å caps |
 | `pressure_disp/` | 1000 | cell compressed to 1/3/5/7 GPa + 0.3 Å displacement |
-| `strain_disp/` | 1000 | strain 1/3/5/7/9 % × displacement 0.2 Å and 0.3 Å |
-| `disp_only/` | 500 | random displacement (rms 0.30 Å) at the equilibrium cell |
+| `pressure_strain_disp/` | 1000 | pressure 1–7 GPa × strain 1–9 % × 0.3 Å displacement |
 | `elastic_Cij/` | 206 | pure Voigt strains, 8 modes × 13 magnitudes × 2 signs |
 | `phonon_disp/` | 155 | all-atom Gaussian displacement, rms 0.009–0.11 Å |
 | `equib_perturb/` | 86 | strain ±1 % + displacement rms 0.03 Å |
 | `vacancy/` | 84 | mono- and di-vacancy, 3×3×2 and 2×2×2 cells |
 | `elastic_vacancy/` | 39 | mono-vacancy cell under Voigt strains, ±2 % |
-| `uniaxial_strain/` | 22 | `strain_x`, `strain_z`; ±10 % in 2 % steps, ionically relaxed |
+| `uniaxial_strain/` | 33 | `strain_x`, `strain_y`, `strain_z`; ±10 % in 2 % steps, ionically relaxed |
 | `compression/` | 19 | uniaxial compression, ε₁ or ε₃ to −10 % |
 | `tensile/` | 17 | uniaxial stretch, ε₁ or ε₃ to +10 % |
 
@@ -68,6 +69,43 @@ Each entry stores `energy` (eV), `forces` (eV/Å), `virial_stress` (GPa, Voigt) 
 **`virial_stress` is stored as −σ, positive under compression.** See
 [`data/README.md`](data/README.md) for the full schema, per-category caveats, and the
 conversion factors for each ML format.
+
+### Sampling conventions
+
+For the ten `strain_disp/Mg3Bi2_<N>_pct_<d>_disp.json` files, the label `<N>` is the bound on
+each **strain-tensor** component, sampled uniformly in [−N %, +N %]. Because engineering shear
+is γ = 2ε, and because the hexagonal basis vectors mix ε_xx with ε_xy, the apparent strain
+measured from lattice-vector lengths can exceed N — up to ≈ 2N for the shear components. The
+label `<d>` is the **cap** on the random atomic displacement, not its typical value: amplitudes
+are drawn uniformly in [0, d], so the mean displacement is ≈ d/2.
+
+### Known redundancy
+
+`uniaxial_strain/strain_y.json` is numerically identical to `strain_x.json` (energies agree to
+< 1e-5 eV, fractional coordinates to < 1e-9, forces to < 1e-6 eV/Å). This is expected: in the
+trigonal −3m point group, a₁ and a₂ uniaxial strain are symmetry-equivalent. The file is
+retained so that `data/` is a superset of `dataset/`, but the two sets should not be treated as
+independent when weighting a fit.
+
+Across the full 5064 configurations there are 8 exact duplicate structures and 28 near
+duplicates (matching volume, energy and force spectrum). These occur where categories meet at
+zero strain — the undeformed reference cell appears in `elastic_Cij`, `tensile`, `compression`
+and `elastic_vacancy`.
+
+---
+
+## Coverage gaps
+
+Two gaps are worth stating explicitly, since both affect derived properties:
+
+**No shear in the 425-configuration T/P-grid set.** Those cells are generated from (a, c) pairs
+via `hex_cell()`, so all off-diagonal strain components are exactly zero by construction. The
+lattices span −5.1 % to +1.3 % relative to the reference cell — predominantly compressive,
+reflecting the 0–9 GPa pressure axis of the grid rather than thermal expansion.
+
+**Limited small-amplitude out-of-plane shear overall.** The e4 (yz) and e1+e4 modes exist only
+in `elastic_Cij`, which is not part of the current ML exports. Potentials trained on the
+exported subset should be expected to reproduce in-plane elastic response better than C₄₄.
 
 ---
 
@@ -88,20 +126,19 @@ three. This supports fair cross-framework benchmarking without format-dependent 
 
 ### Scope of the exports
 
-The exports currently cover only five of the thirteen categories: `disp_only`,
-`strain_disp`, `pressure_disp`, `pressure_strain_disp` and `uniaxial_strain`.
+The exports cover five of the twelve categories: `disp_only`, `strain_disp`, `pressure_disp`,
+`pressure_strain_disp` and `uniaxial_strain`.
 
 The remaining **606 configurations — `elastic_Cij`, `phonon_disp`, `equib_perturb`, `vacancy`,
 `elastic_vacancy`, `tensile` and `compression` — are present in `data/` but were not exported
 or trained on.** Anyone reproducing or extending the potential in `train/` should be aware
 that it has seen no pure-Voigt elastic data, no vacancy data, and no clean uniaxial
-tensile/compressive data. In particular the e4 (yz) and e1+e4 shear modes exist only in
-`elastic_Cij`, so the fitted potential has no small-amplitude out-of-plane shear coverage.
+tensile/compressive data.
 
-The exports also contain 502 configurations with no counterpart in `data/` — 500 equilibrium-cell
-displacement configurations (the missing `disp_only/Mg3Bi2_pct_0.2_disp.json`) and 2 a₂-axis
-uniaxial configurations (the missing `uniaxial_strain/strain_y.json`). Restoring those two files
-and re-merging with the excluded categories would make `data/` a true superset of `dataset/`.
+`data/` is now a superset of `dataset/`: the previously absent
+`disp_only/Mg3Bi2_pct_0.2_disp.json` and `uniaxial_strain/strain_y.json` have been restored.
+The 425-configuration `strain_disp/Mg3Bi2_lattice_strain_atom_displaced.json` set postdates the
+exports and is not included in them.
 
 ---
 
@@ -110,8 +147,11 @@ and re-merging with the excluded categories would make `data/` a true superset o
 `MTP_xyz_format.ipynb` documents the conversion between the raw JSON, extended XYZ (NEP), MTP
 CFG and DeepMD `.npy` formats.
 
-The configuration generators and the QE parser used to produce `data/` are not currently in
-the repository.
+`make_displaced.py` generates the QE inputs: it reads a vc-relaxed unit cell, builds the
+supercell, optionally strains it onto a 24-point (a, c) grid covering T = 300–600 K and
+P = 0–9 GPa (`--cover-lattices`), and applies a random per-atom displacement with a per-folder
+amplitude cap drawn uniformly in [`--min-disp`, `--max-disp`]. The random seed defaults to 12,
+so the sets are reproducible.
 
 ---
 
@@ -137,7 +177,7 @@ included.
 ## Data management
 
 Raw configurations are tracked with **Git LFS** (`.gitattributes` covers `*.json`). Total
-on-disk size is approximately **475 MB**: `data/` ≈ 295 MB, `dataset/` ≈ 90 MB,
+on-disk size is approximately **565 MB**: `data/` ≈ 385 MB, `dataset/` ≈ 90 MB,
 `train/` ≈ 91 MB.
 
 Note that the ML exports (`train.xyz`, `train.cfg`, `*.npy`) and the training outputs are
