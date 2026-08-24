@@ -50,7 +50,7 @@ across 12 categories:
 
 | Category | Configs | Description |
 |---|---|---|
-| `strain_disp/` | 1425 | strain 1/3/5/7/9 % × displacement 0.2 Å and 0.3 Å (1000); plus a T/P-grid lattice set with random displacement (425) |
+| `strain_disp/` | 1475 | strain 1/3/5/7/9 % × displacement 0.2 Å and 0.3 Å (1000); plus a T/P-grid lattice set with random displacement (475) |
 | `disp_only/` | 1000 | random displacement at the equilibrium cell, 0.2 Å and 0.3 Å caps |
 | `pressure_disp/` | 1000 | cell compressed to 1/3/5/7 GPa + 0.3 Å displacement |
 | `pressure_strain_disp/` | 1000 | pressure 1–7 GPa × strain 1–9 % × 0.3 Å displacement |
