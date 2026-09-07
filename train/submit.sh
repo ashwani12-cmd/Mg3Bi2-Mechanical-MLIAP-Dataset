@@ -1,38 +1,122 @@
 #!/bin/bash
-#PBS -N gpumd_job
-#PBS -q gpu
-#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb
-#PBS -l walltime=96:00:00
-#PBS -o output.log
-#PBS -e error.log
+#SBATCH --job-name=gpumd
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --exclude=rmgpu026
+#SBATCH --gpus=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=64G
+#SBATCH --time=48:00:00
+#SBATCH --output=gpumd.out
+#SBATCH --error=gpumd.err
 
-echo "================= JOB INFO ================="
-echo "Host: $(hostname)"
-echo "Job ID: $PBS_JOBID"
-echo "Nodefile:"
-cat $PBS_NODEFILE
-echo "Working Directory: $PBS_O_WORKDIR"
-echo "============================================"
+############################
+# Environment
+############################
+module purge
+module load gcc
+module load cuda/12.0
 
-cd "$PBS_O_WORKDIR"
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+# DO NOT hardcode CUDA_VISIBLE_DEVICES unless debugging
+# export CUDA_VISIBLE_DEVICES=0
 
-# ---------------- Environment Setup ----------------
-if [ -f /apps/spack/v0.23/share/spack/setup-env.sh ]; then
-    . /apps/spack/v0.23/share/spack/setup-env.sh
-    spack load cuda@12.6.2%gcc@11.4.1 arch=linux-rhel9-icelake
-fi
+echo "=============================================="
+echo " Job start time : $(date)"
+echo " Hostname       : $(hostname)"
+echo " SLURM Job ID   : $SLURM_JOB_ID"
+echo "=============================================="
 
-# -------- USE ONLY 3 GPUs (VERY IMPORTANT) ---------
-export CUDA_VISIBLE_DEVICES=0
-echo "CUDA_VISIBLE_DEVICES = $CUDA_VISIBLE_DEVICES"
-
-echo "------------- GPU STATUS BEFORE RUN -------------"
+############################
+# CUDA / software info
+############################
+echo "=== CUDA SOFTWARE STACK ==="
+which nvcc
+nvcc --version
 nvidia-smi
-echo "--------------------------------------------------"
+echo
 
-# ----------------- Run GPUMD ------------------
-echo "Starting GPUMD run..."
-/home/multiscale-mechanics/ashwani12/software/builds/GPUMD/src/nep > out.dat
+############################
+# GPU TOPOLOGY
+############################
+echo "=== GPU TOPOLOGY ==="
+nvidia-smi topo -m
+echo
 
-echo "================ JOB FINISHED ================="
+############################
+# MIG STATUS (CRITICAL)
+############################
+echo "=== MIG STATUS ==="
+nvidia-smi -L
+nvidia-smi -q | sed -n '/MIG Mode/,+10p'
+echo
+
+############################
+# DETAILED GPU INFO
+############################
+echo "=== DETAILED GPU INFO ==="
+nvidia-smi -q -d \
+MEMORY,UTILIZATION,POWER,CLOCK,COMPUTE,ECC,PCI,PERFORMANCE
+echo
+
+############################
+# CLOCKS & POWER LIMITS
+############################
+echo "=== CLOCKS & POWER ==="
+nvidia-smi --query-gpu=index,name,pstate,clocks.sm,clocks.mem,clocks.gr,clocks.max.sm,clocks.max.mem,power.limit,power.draw \
+--format=csv
+echo
+
+############################
+# ENVIRONMENT
+############################
+echo "=== ENVIRONMENT VARIABLES ==="
+echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
+echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
+echo "PATH=$PATH"
+echo
+
+############################
+# START GPU MONITOR (background)
+############################
+echo "=== Starting GPU monitor ==="
+nvidia-smi dmon -s pucm -d 5 > gpu_monitor.log &
+DMON_PID=$!
+sleep 2
+
+############################
+# RUN GPUMD
+############################
+cd $SLURM_SUBMIT_DIR
+
+GPUMD_BIN=/home/IITB/multiscale-mechanics/amit.k.singh/software/builds/GPUMD/src/nep
+
+echo "=== Starting GPUMD ==="
+echo "Start time: $(date)"
+
+srun $GPUMD_BIN > out.dat
+
+GPUMD_EXIT_CODE=$?
+
+echo "GPUMD exit code: $GPUMD_EXIT_CODE"
+echo "End time: $(date)"
+
+############################
+# STOP GPU MONITOR
+############################
+kill $DMON_PID
+sleep 1
+
+############################
+# FINAL GPU STATE
+############################
+echo "=== FINAL GPU STATE ==="
+nvidia-smi
+echo
+
+echo "=============================================="
+echo " Job finished at: $(date)"
+echo "=============================================="
+
 

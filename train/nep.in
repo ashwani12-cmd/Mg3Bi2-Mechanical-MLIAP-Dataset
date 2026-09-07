@@ -1,14 +1,18 @@
-version       4       # default
+version       4
 type          2  Mg Bi 
-cutoff        7 4     # default
-n_max         4 4     # default
-basis_size    8 8     # default
-l_max         4 2 0   # default
-neuron        50      # default
-lambda_e      1.0     # default
-lambda_f      1.0     # default
-lambda_v      0.1     # default
-batch         1000    # default
-zbl           2.5
-population    50      # default
+cutoff        6 5          # unified attempt; go 7 4 ONLY if C13/C33 still lag after this
+n_max         4 4
+basis_size    10 10        # up from 8 → richer radial resolution for the c-axis virials
+l_max         4 2 0
+neuron        80           # up from 60 → capacity so phonon vs elastic isn't zero-sum
+lambda_1      0.0
+lambda_2      0.05         # light L2 to keep the bigger net honest
+lambda_e      1.0
+lambda_f      1.0
+lambda_v      0.8
+lambda_shear  5.0          # legit keyword — extra weight on off-diagonal (shear) virials → C44/C66/C14
+force_delta   0.8          # rebalances force loss away from the 8–22 eV/Å frames so phonon forces survive
+zbl           1.5
+batch         1000
+population     50
 generation    300000
