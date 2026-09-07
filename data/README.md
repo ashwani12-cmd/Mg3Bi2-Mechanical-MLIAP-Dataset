@@ -38,7 +38,7 @@ Mg3Bi2-Mechanical-MLIAP-Dataset/
 │   ├── nep_elastic_const/       Elastic tensor vs. temperature (LAMMPS + NEP)
 │   ├── gruneisen/               Grüneisen parameter, phonon DOS
 │   ├── thermal_expansion/       NPT runs at 0–9 GPa (LAMMPS + NEP)
-│   └── Defect_formation_energy/ NEB diffusion barriers, Arrhenius/MSD analysis
+│   └── defect_formation_energy/ NEB diffusion barriers, Arrhenius/MSD analysis
 ├── figures/                     (empty — placeholder)
 ├── validation/                  (empty — placeholder; subfolders mirror analysis/ categories
 │                                and are not currently populated)
@@ -179,7 +179,7 @@ further training data.
 | `nep_elastic_const/` | Elastic tensor vs. temperature, 300–1000 K, via LAMMPS + NEP (`elastic_T/`), plus a single-point LAMMPS elastic run (`nep_lammps/`). Everything here is NEP+LAMMPS — no DFT elastic-constant calculation exists; the `.pwi` files inside `nep_lammps/` are QE inputs used only to relax the starting cell before conversion to LAMMPS format |
 | `gruneisen/` | Grüneisen parameter and phonon DOS from the NEP potential |
 | `thermal_expansion/` | LAMMPS NPT runs at 0, 1, 3, 5, 7, 9 GPa |
-| `Defect_formation_energy/` | NEB migration barriers (`neb_all_paths/`) and NEP-driven MD diffusion (Arrhenius, MSD) at T = 300–700 K, 5 runs each |
+| `defect_formation_energy/` | NEB migration barriers (`neb_all_paths/`) and NEP-driven MD diffusion (Arrhenius, MSD) at T = 300–700 K, 5 runs each |
 
 These folders are **not** part of the training/export pipeline described above and are not
 covered by the LFS filter beyond the `*.json`/`*.xyz`/`*.cfg`/`*.npy` patterns already in
