@@ -1,0 +1,19 @@
+potential ./nep_y2026_m09_d04_h13_m17_s19_generation300000.txt
+
+# ── Energy minimization ───────────────────────────────────────
+minimize fire 1.0e-5 100000 1
+
+# ── Equilibrate NVT 500K — 200 ps ────────────────────────────
+velocity 500
+time_step 1
+ensemble nvt_nhc 500 500 100
+dump_thermo 1000
+run 200000
+
+# ── Production NVT 500K — 2 ns + MSD ─────────────────────────
+# compute_msd: every 100 steps, grouping method 0, group id 0
+#              → tracks Mg atoms only (group 0 in group.in)
+ensemble nvt_nhc 500 500 100
+compute_msd 20 10000 group 0 0
+dump_thermo 1000
+run 2000000

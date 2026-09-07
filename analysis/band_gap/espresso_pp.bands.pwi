@@ -1,0 +1,5 @@
+&BANDS
+  prefix = 'mg3bi2'
+  outdir = './tmp/'
+  filband = 'mg3bi2_bands.dat'
+/

@@ -1,0 +1,471 @@
+
+***************************************************************
+*                 Welcome to use GPUMD                        *
+*     (Graphics Processing Units Molecular Dynamics)          *
+*                     version 4.2                             *
+*              This is the gpumd executable                   *
+***************************************************************
+
+
+---------------------------------------------------------------
+Compiling options:
+---------------------------------------------------------------
+
+DEBUG is off: Use different PRNG seeds for different runs.
+
+---------------------------------------------------------------
+GPU information:
+---------------------------------------------------------------
+
+number of GPUs = 1
+Device id:                   0
+    Device name:             NVIDIA A100 80GB PCIe
+    Compute capability:      8.0
+    Amount of global memory: 79.1384 GB
+    Number of SMs:           108
+
+---------------------------------------------------------------
+Started running GPUMD.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Started initializing positions and related parameters.
+---------------------------------------------------------------
+
+Number of atoms is 13500.
+Use periodic boundary conditions along x.
+Use periodic boundary conditions along y.
+Use periodic boundary conditions along z.
+Box matrix h = [a, b, c] is
+    6.9064508265e+01   -3.4532254140e+01    0.0000000000e+00
+   -0.0000000000e+00    5.9811618660e+01    0.0000000000e+00
+    0.0000000000e+00   -0.0000000000e+00    8.7317274384e+01
+Inverse box matrix g = inv(h) is
+    1.4479216969e-02    8.3595798159e-03   -0.0000000000e+00
+    0.0000000000e+00    1.6719159628e-02   -0.0000000000e+00
+    0.0000000000e+00    0.0000000000e+00    1.1452487575e-02
+Do not specify initial velocities here.
+Have no grouping method.
+There are 2 atom types.
+    8100 atoms of type 0.
+    5400 atoms of type 1.
+Initialized velocities with default T = 300 K.
+
+---------------------------------------------------------------
+Finished initializing positions and related parameters.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Started executing the commands in run.in.
+---------------------------------------------------------------
+
+Use the NEP4 potential with 2 atom types.
+    type 0 (Mg with Z = 12).
+    type 1 (Bi with Z = 83).
+    has the universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    MN_radial = 52.
+    enlarged MN_radial = 65.
+    enlarged MN_angular = 39.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+
+Start to do an energy minimization.
+    using the fast inertial relaxation engine (FIRE) method.
+    with variable box.
+    with a force tolerance of 1e-05 eV/A.
+    for maximally 100000 steps.
+
+Energy minimization with changed box started.
+    step 0: total_potential = -42181.6257896423 eV, f_max = 0.0052318121 eV/A, pressure = -0.0212661572 GPa.
+    step 8576: total_potential = -42237.7828187943 eV, f_max = 0.0000099977 eV/A, pressure = -0.0000027647 GPa.
+Energy minimization finished.
+Initialized velocities with input T = 100 K.
+Time step for this run is 1 fs.
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 100 K.
+    final temperature is 100 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 30.148 second.
+Speed of this run = 8.95582e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 200 K.
+    final temperature is 200 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 31.2759 second.
+Speed of this run = 8.63284e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 300 K.
+    final temperature is 300 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 31.9497 second.
+Speed of this run = 8.45078e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 400 K.
+    final temperature is 400 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 32.0402 second.
+Speed of this run = 8.42692e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 500 K.
+    final temperature is 500 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 32.2196 second.
+Speed of this run = 8.38e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 600 K.
+    final temperature is 600 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 32.4683 second.
+Speed of this run = 8.31579e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 700 K.
+    final temperature is 700 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 32.5209 second.
+Speed of this run = 8.30234e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 800 K.
+    final temperature is 800 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 32.5317 second.
+Speed of this run = 8.29958e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 900 K.
+    final temperature is 900 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 32.548 second.
+Speed of this run = 8.29545e+06 atom*step/second.
+---------------------------------------------------------------
+
+Use NPT ensemble for this run.
+    choose the Berendsen method.
+    initial temperature is 1000 K.
+    final temperature is 1000 K.
+    tau_T is 100 time_step
+    pressure_xx is 9 GPa.
+    pressure_yy is 9 GPa.
+    pressure_zz is 9 GPa.
+    pressure_yz is 0 GPa.
+    pressure_xz is 0 GPa.
+    pressure_xy is 0 GPa.
+    modulus_xx is 60.84 GPa.
+    modulus_yy is 60.84 GPa.
+    modulus_zz is 73.12 GPa.
+    modulus_yz is 17.82 GPa.
+    modulus_xz is 17.82 GPa.
+    modulus_xy is 10.89 GPa.
+    tau_p is 1000 time_step.
+Dump thermo every 10 steps.
+Run 20000 steps.
+    2000 steps completed.
+    4000 steps completed.
+    6000 steps completed.
+    8000 steps completed.
+    10000 steps completed.
+    12000 steps completed.
+    14000 steps completed.
+    16000 steps completed.
+    18000 steps completed.
+    20000 steps completed.
+
+---------------------------------------------------------------
+Time used for this run = 32.5349 second.
+Speed of this run = 8.29879e+06 atom*step/second.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Finished executing the commands in run.in.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Time used = 333.608460 s.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Finished running GPUMD.
+---------------------------------------------------------------
+

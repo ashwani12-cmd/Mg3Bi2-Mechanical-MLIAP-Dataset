@@ -12,3 +12,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Quantum ESPRESSO scratch (wavefunctions, charge density) — not reference data
+analysis/band_gap/tmp/
+**/tmp/*.wfc*
+

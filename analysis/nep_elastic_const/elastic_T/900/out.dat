@@ -1,0 +1,1851 @@
+LAMMPS (24 Mar 2022)
+Lattice spacing in x,y,z = 6.9064169 3.9874216 7.2763861
+Created triclinic box = (0 0 0) to (4.6042779 3.9874216 7.2763861) with tilt (-2.3021389 0 0)
+  4 by 3 by 4 MPI processor grid
+Created 5 atoms
+  using lattice units in triclinic box = (0 0 0) to (4.6042779 3.9874216 7.2763861) with tilt (-2.3021389 0 0)
+  create_atoms CPU = 0.002 seconds
+Replicating atoms ...
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  13500 atoms
+  replicate CPU = 0.002 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.068 | 3.068 | 3.068 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   900           -42181.628      4444.8681      0              0              0              0              0              0            
+       100   883.92793     -41266.914      15921.985      12248.698      12487.8        11641.864     -100.44044      25.952546      75.134536    
+       200   901.62441     -41091.071      17883.989      17987.796      17797.077      16010.768     -96.424483      132.48666     -75.370201    
+       300   903.95167     -41001.646      18421.589      18977.157      18695.298      16963.195     -130.61069      151.50836     -90.945908    
+       400   897.24556     -40933.692      18741.202      19373.788      19177.884      17435.577     -225.49747      180.01919     -65.146694    
+       500   885.64554     -40890.292      18802.822      19585.875      19486.503      17321.124     -27.693772      140.0807      -56.848536    
+       600   894.33595     -40852.945      19062.956      19715.202      19625.518      17604.448     -123.44602      173.59165     -154.30943    
+       700   897.43782     -40814.115      19248.42       19680.984      20175.224      17780.554     -3.1072831      57.542988      99.102314    
+       800   890.77961     -40779.28       19443.932      19779.829      20041.87       18113.963     -265.65584      185.52544     -23.402835    
+       900   889.88187     -40763.812      19431.091      20338.659      19847.705      18251.712     -116.10559      199.48617     -283.9755     
+      1000   903.72869     -40742.516      19646.165      20432.258      20441.412      17988.49      -6.4431527      148.2515      -75.912003    
+Loop time of 15.2019 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.683 ns/day, 4.223 hours/ns, 65.781 timesteps/s
+99.5% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.77      | 13.644     | 14.437     |  14.7 | 89.75
+Neigh   | 0.058244   | 0.063058   | 0.067505   |   1.5 |  0.41
+Comm    | 0.40209    | 1.2567     | 2.1868     |  48.5 |  8.27
+Output  | 0.00053861 | 0.00060368 | 0.0014928  |   0.0 |  0.00
+Modify  | 0.025758   | 0.046379   | 0.071642   |   6.6 |  0.31
+Other   |            | 0.1913     |            |       |  1.26
+
+Nlocal:         281.25 ave         297 max         262 min
+Histogram: 2 3 10 7 1 1 3 3 14 4
+Nghost:        1267.88 ave        1300 max        1231 min
+Histogram: 2 6 14 1 1 0 0 6 12 6
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14429.9 ave       15266 max       13435 min
+Histogram: 3 3 10 6 2 1 2 7 7 7
+
+Total # of neighbors = 692636
+Ave neighs/atom = 51.30637
+Neighbor list builds = 32
+Dangerous builds = 0
+1
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.068 | 3.068 | 3.068 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   903.72869     -40742.516      19646.165      0              0              0              0              0              0            
+       100   892.606       -40720.082      19732.759      20312.443      20488.597      18087.04      -165.0026       64.977604     -85.003174    
+       200   895.43657     -40718.639      19670.584      20515.115      19940.848      18562.141     -10.409694     -62.617028     -297.32386    
+       300   905.524       -40695.786      19776.238      20688.979      20141.509      18435.551     -71.106712      92.122072     -116.51476    
+Loop time of 4.57053 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.671 ns/day, 4.232 hours/ns, 65.638 timesteps/s
+99.5% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8791     | 4.105      | 4.3419     |   7.6 | 89.81
+Neigh   | 0.01626    | 0.017754   | 0.019246   |   0.7 |  0.39
+Comm    | 0.11045    | 0.36034    | 0.57222    |  22.7 |  7.88
+Output  | 0.00014444 | 0.00015814 | 0.00018691 |   0.0 |  0.00
+Modify  | 0.0056767  | 0.017912   | 0.033369   |   9.2 |  0.39
+Other   |            | 0.06941    |            |       |  1.52
+
+Nlocal:         281.25 ave         298 max         262 min
+Histogram: 2 2 10 8 2 0 5 6 9 4
+Nghost:        1267.42 ave        1299 max        1228 min
+Histogram: 1 2 15 5 1 0 0 5 14 5
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14453.8 ave       15368 max       13506 min
+Histogram: 3 5 11 3 2 0 5 8 7 4
+
+Total # of neighbors = 693780
+Ave neighs/atom = 51.391111
+Neighbor list builds = 9
+Dangerous builds = 0
+System init for write_restart ...
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.154 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+WARNING: Triclinic box skew is large (../domain.cpp:228)
+  triclinic box = (0 0 0) to (67.682885 59.811324 87.316633) with tilt (-34.532084 0 0)
+  triclinic box = (0 0 0) to (67.682885 59.811324 87.316633) with tilt (-33.841443 0 0)
+  triclinic box = (0 0 0) to (67.682885 59.811324 87.316633) with tilt (-33.841443 0 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.08 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40586.066      30124.315      0              0              0              0              0              0            
+       100   889.11462     -40638.355      28928.565      35826.381      27774.806      24483.772     -52.526272      85.596633     -744.34397    
+       200   891.35912     -40627.484      28869.57       34260.707      28088.512      24274.939     -88.433777      200.8318      -314.54784    
+       300   904.29992     -40635.41       28784.66       33970.889      28179.214      24336.353      240.73228     -11.789495     -219.68651    
+       400   893.78991     -40631.775      28750.43       33417.171      28389.444      24594.949      300.768       -152.80261     -77.071448    
+       500   887.71928     -40612.17       28855.529      33002.738      28759.934      24756.638     -246.56886     -0.38767039     141.13779    
+       600   899.09596     -40618.896      28864.53       32988.569      28823.879      24705.218     -293.00898      69.842273      254.15094    
+       700   895.26335     -40625.328      28642.538      32595.222      28946.962      24868.053     -216.00063     -52.786839      465.2103     
+       800   897.19569     -40616.801      28637.462      32679.985      28478.066      24864.146      192.68443     -158.49301      172.09016    
+       900   901.88307     -40608.711      28755.903      32877.774      28533.892      24952.485      93.613802     -140.07104      154.55199    
+      1000   897.08784     -40604.846      28671.19       33012.461      28474.549      24734.138     -112.81036     -240.43082      0.44048255   
+Loop time of 15.4548 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.590 ns/day, 4.293 hours/ns, 64.705 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 13.106     | 13.909     | 14.766     |  14.4 | 90.00
+Neigh   | 0.059478   | 0.063824   | 0.068096   |   1.2 |  0.41
+Comm    | 0.35582    | 1.2071     | 2.0363     |  46.4 |  7.81
+Output  | 0.00052519 | 0.0005533  | 0.00069292 |   0.0 |  0.00
+Modify  | 0.018766   | 0.035545   | 0.054353   |   6.0 |  0.23
+Other   |            | 0.2388     |            |       |  1.55
+
+Nlocal:         281.25 ave         300 max         263 min
+Histogram: 1 6 7 6 4 3 10 6 3 2
+Nghost:        1274.29 ave        1302 max        1242 min
+Histogram: 3 7 2 7 4 2 3 5 11 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14849.3 ave       15959 max       13872 min
+Histogram: 2 6 7 6 3 5 12 3 3 1
+
+Total # of neighbors = 712766
+Ave neighs/atom = 52.797481
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.071 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   897.08784     -40604.846      28671.19       0              0              0              0              0              0            
+       100   885.05627     -40595.509      28552.158      32647.04       28456.359      24631.836     -144.42326     -329.35137      33.458567    
+       200   890.1614      -40590.902      28636.375      32658.241      29052.901      24582.177     -319.96976     -219.0538       288.88492    
+       300   897.03776     -40582.13       28776.749      32827.524      28625.71       24775.242     -320.66037      30.91288       187.46485    
+Loop time of 4.74679 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.461 ns/day, 4.395 hours/ns, 63.201 timesteps/s
+99.5% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.9237     | 4.1834     | 4.4829     |   7.4 | 88.13
+Neigh   | 0.016827   | 0.018054   | 0.019449   |   0.6 |  0.38
+Comm    | 0.1499     | 0.4457     | 0.73208    |  21.8 |  9.39
+Output  | 0.00013008 | 0.0001397  | 0.00018296 |   0.0 |  0.00
+Modify  | 0.0062449  | 0.01192    | 0.029848   |   6.0 |  0.25
+Other   |            | 0.0876     |            |       |  1.85
+
+Nlocal:         281.25 ave         303 max         266 min
+Histogram: 6 11 5 1 3 9 3 7 2 1
+Nghost:        1272.15 ave        1299 max        1243 min
+Histogram: 2 9 3 6 4 2 3 7 8 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14854.2 ave       16259 max       13975 min
+Histogram: 6 11 4 4 6 5 9 2 0 1
+
+Total # of neighbors = 713000
+Ave neighs/atom = 52.814815
+Neighbor list builds = 9
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.012 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (70.445452 59.811324 87.316633) with tilt (-34.532084 0 0)
+  triclinic box = (0 0 0) to (70.445452 59.811324 87.316633) with tilt (-35.222726 0 0)
+  triclinic box = (0 0 0) to (70.445452 59.811324 87.316633) with tilt (-35.222726 0 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.078 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40731.581      10717.778      0              0              0              0              0              0            
+       100   898.69132     -40693.558      11244.824      7138.0492      13469.76       12370.324     -138.30061      88.170804      86.01214     
+       200   897.52256     -40664.065      11598.616      8637.6318      13222.526      12528.175      252.84687      15.739775     -406.87466    
+       300   896.03482     -40648.359      11722.172      9183.581       13030.9        12735.735      370.897       -33.249944     -392.15029    
+       400   899.72239     -40626.07       11973.741      9257.5623      13053.857      13166.838      275.40486      12.734041     -368.93345    
+       500   893.0102      -40642.784      11809.999      9478.6105      13091.28       13043.592      16.959013      226.70107     -408.12108    
+       600   890.90461     -40634.614      11812.474      9596.5194      12931.816      13133.54      -209.24786      308.37464     -584.97906    
+       700   892.21849     -40628.821      11882.105      9495.1391      13127.187      13038.867     -120.67964      164.59902     -435.65768    
+       800   889.03441     -40612.558      11938.003      9319.5134      13700.941      12984.897      120.64087     -28.887133     -134.08211    
+       900   896.67671     -40603.896      12046.832      9476.6524      13738.638      12716.035     -150.27201      180.47848     -214.84885    
+      1000   899.61671     -40610.745      11945.868      9447.795       13590.861      12950.189     -261.02146      309.73155     -238.34226    
+Loop time of 14.9103 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.795 ns/day, 4.142 hours/ns, 67.068 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.589     | 13.456     | 14.269     |  14.0 | 90.25
+Neigh   | 0.060485   | 0.065027   | 0.072552   |   1.3 |  0.44
+Comm    | 0.35784    | 1.1779     | 2.0547     |  45.8 |  7.90
+Output  | 0.00044667 | 0.0004927  | 0.00059283 |   0.0 |  0.00
+Modify  | 0.018303   | 0.033878   | 0.056985   |   6.1 |  0.23
+Other   |            | 0.1766     |            |       |  1.18
+
+Nlocal:         281.25 ave         300 max         264 min
+Histogram: 4 7 8 4 1 1 11 6 5 1
+Nghost:        1255.12 ave        1289 max        1222 min
+Histogram: 2 9 10 3 0 0 3 15 4 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14201.7 ave       15199 max       13272 min
+Histogram: 4 4 10 5 2 0 10 7 5 1
+
+Total # of neighbors = 681682
+Ave neighs/atom = 50.494963
+Neighbor list builds = 33
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.071 | 3.08 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   899.61671     -40610.745      11945.868      0              0              0              0              0              0            
+       100   894.01898     -40616.81       11822.355      9272.2116      13446.482      13208.07      -273.14646      266.04478     -246.82942    
+       200   903.09944     -40598.063      12114.108      9408.6185      13317.498      13128.07      -146.33949      194.99209     -406.05779    
+       300   901.03366     -40582.894      12284.074      9523.8908      13903.284      13324.592      69.866494      88.007459     -265.03442    
+Loop time of 4.54655 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.701 ns/day, 4.210 hours/ns, 65.984 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.7319     | 4.0403     | 4.3533     |   8.0 | 88.87
+Neigh   | 0.016348   | 0.017737   | 0.019181   |   0.7 |  0.39
+Comm    | 0.15194    | 0.41367    | 0.7552     |  22.8 |  9.10
+Output  | 0.00013191 | 0.00015001 | 0.00020118 |   0.0 |  0.00
+Modify  | 0.0053075  | 0.0089394  | 0.016458   |   3.8 |  0.20
+Other   |            | 0.06572    |            |       |  1.45
+
+Nlocal:         281.25 ave         298 max         268 min
+Histogram: 8 9 3 3 1 2 8 7 3 4
+Nghost:           1257 ave        1289 max        1228 min
+Histogram: 10 7 4 3 0 1 2 6 10 5
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14209.9 ave       15123 max       13458 min
+Histogram: 8 7 6 2 1 6 4 7 3 4
+
+Total # of neighbors = 682076
+Ave neighs/atom = 50.524148
+Neighbor list builds = 9
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.028 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 58.615098 87.316633) with tilt (-34.532084 0 0)
+  triclinic box = (0 0 0) to (69.064169 58.615098 87.316633) with tilt (-34.532084 0 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.067 | 3.074 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40586.252      30116.046      0              0              0              0              0              0            
+       100   900.10972     -40644.974      28917.458      28295.729      35166.934      24536.343     -135.26918      128.87646      256.82954    
+       200   893.08839     -40650.948      28744.602      28832.133      33396.008      24462.907     -274.67108      250.73288     -235.68176    
+       300   893.52797     -40642.251      28765.727      28220.988      33315.349      24465.237     -435.52934      271.80301     -3.7774875    
+       400   894.51463     -40622.369      28843.013      28715.501      33279.329      24792.706     -341.2019       248.33591     -186.60096    
+       500   908.74292     -40628.52       28881.944      28614.608      33105.867      24850.469     -188.63268      186.25822     -123.02265    
+       600   898.43942     -40601.298      28850.84       28664.605      32914.142      24776.737      21.281539      104.22019     -197.72943    
+       700   903.02818     -40617.166      28594.957      28653.295      32617.344      24417.239     -249.14955      191.19206     -81.153338    
+       800   902.27629     -40596.655      29038.187      28935.228      32873.55       24797.345      54.11172       183.60894     -257.33379    
+       900   904.78731     -40605.016      28651.87       28783.423      32796.589      24567.33      -86.080904      306.03296     -314.12259    
+      1000   891.91436     -40601.841      28654.434      28901.812      32775.428      24434.491     -14.831719      160.61834     -193.52917    
+Loop time of 15.4736 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.584 ns/day, 4.298 hours/ns, 64.626 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 13.091     | 13.908     | 14.658     |  13.8 | 89.88
+Neigh   | 0.059278   | 0.063844   | 0.068143   |   1.3 |  0.41
+Comm    | 0.42326    | 1.2308     | 1.9747     |  46.0 |  7.95
+Output  | 0.00046429 | 0.00050282 | 0.00080871 |   0.0 |  0.00
+Modify  | 0.027782   | 0.066293   | 0.11308    |  10.5 |  0.43
+Other   |            | 0.2041     |            |       |  1.32
+
+Nlocal:         281.25 ave         297 max         263 min
+Histogram: 2 5 7 4 5 1 3 9 8 4
+Nghost:        1271.94 ave        1303 max        1238 min
+Histogram: 2 5 11 5 1 0 2 8 12 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14849.1 ave       15690 max       13888 min
+Histogram: 2 7 7 4 4 0 4 7 6 7
+
+Total # of neighbors = 712756
+Ave neighs/atom = 52.796741
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.07 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   891.91436     -40601.841      28654.434      0              0              0              0              0              0            
+       100   900.49226     -40599.93       28779.942      29039.476      32732.224      24621.045      127.47159      19.219708     -138.37883    
+       200   897.41809     -40563.861      29167.008      28709.026      33458.477      24761.961      225.2196      -34.907605      34.87975     
+       300   907.45478     -40590.024      28929.419      29051.854      33133.196      24726.928     -205.92765      134.64687     -93.111929    
+Loop time of 4.54026 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.709 ns/day, 4.204 hours/ns, 66.076 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8697     | 4.1734     | 4.44       |   7.9 | 91.92
+Neigh   | 0.016459   | 0.017938   | 0.019259   |   0.7 |  0.40
+Comm    | 0.051546   | 0.31361    | 0.62894    |  27.8 |  6.91
+Output  | 0.00017927 | 0.00019396 | 0.00023621 |   0.0 |  0.00
+Modify  | 0.0054451  | 0.0076309  | 0.013398   |   2.3 |  0.17
+Other   |            | 0.02748    |            |       |  0.61
+
+Nlocal:         281.25 ave         296 max         262 min
+Histogram: 2 3 8 5 4 3 2 6 7 8
+Nghost:        1273.58 ave        1303 max        1242 min
+Histogram: 4 7 9 3 1 0 0 9 9 6
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14854.9 ave       15769 max       13842 min
+Histogram: 3 4 9 4 3 3 5 4 9 4
+
+Total # of neighbors = 713034
+Ave neighs/atom = 52.817333
+Neighbor list builds = 9
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.004 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 61.007551 87.316633) with tilt (-34.532084 0 0)
+  triclinic box = (0 0 0) to (69.064169 61.007551 87.316633) with tilt (-34.532084 0 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.069 | 3.08 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40731.475      10724.961      0              0              0              0              0              0            
+       100   905.95442     -40680.274      11368.718      13966.471      6752.6224      12471.007     -150.82395      121.01013     -477.16858    
+       200   902.86763     -40661.74       11672.176      13765.107      8475.7511      12726.18      -500.44223      346.25118      35.822134    
+       300   905.11938     -40642.294      11930.93       13630.977      8640.6851      12864.447     -453.55786      318.28094      38.845223    
+       400   909.72635     -40632.509      12119.441      14144.931      8792.7973      13297.831     -236.57268      143.5906       6.8448794    
+       500   912.72529     -40629.49       12117.538      14223.67       8734.9399      12986.361      19.451139     -91.015931     -25.090395    
+       600   893.14714     -40630.48       12004.437      14243.811      9198.514       12902.057     -95.489531      93.321614      41.058384    
+       700   907.90331     -40610.131      12223.423      13853.989      9432.358       12743.197      36.65037       39.307204      326.05491    
+       800   902.59789     -40605.372      12318.246      14053.936      9263.3382      13263.297     -313.2461       142.31072      242.79927    
+       900   907.55532     -40610.429      12263.734      14366.027      9439.6858      13019.127     -160.51742     -41.410319      222.09428    
+      1000   901.66329     -40599.555      12316.499      14026.044      9703.9873      13090.951     -244.78979      71.45639       312.67574    
+Loop time of 14.9022 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.798 ns/day, 4.140 hours/ns, 67.104 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.559     | 13.46      | 14.289     |  14.0 | 90.32
+Neigh   | 0.058225   | 0.062633   | 0.067098   |   1.3 |  0.42
+Comm    | 0.2741     | 1.1263     | 2.0283     |  47.8 |  7.56
+Output  | 0.00040101 | 0.00044309 | 0.00056978 |   0.0 |  0.00
+Modify  | 0.018323   | 0.043056   | 0.07467    |   7.4 |  0.29
+Other   |            | 0.2102     |            |       |  1.41
+
+Nlocal:         281.25 ave         300 max         265 min
+Histogram: 3 7 12 2 1 4 5 6 5 3
+Nghost:        1245.25 ave        1277 max        1217 min
+Histogram: 8 10 3 2 1 1 4 7 9 3
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14196.5 ave       15201 max       13404 min
+Histogram: 4 10 8 3 1 6 2 7 4 3
+
+Total # of neighbors = 681430
+Ave neighs/atom = 50.476296
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.074 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   901.66329     -40599.555      12316.499      0              0              0              0              0              0            
+       100   911.24171     -40586.103      12462.239      13922.211      9871.6612      13283.362     -93.676776     -6.1069618      454.05892    
+       200   898.75162     -40606.716      12127.361      13744.607      10065.583      13011.562      42.968325     -76.955029      573.75373    
+       300   904.68677     -40599.851      12067.494      13828.66       9358.6848      12956.163      32.711199     -116.29965      475.68442    
+Loop time of 4.46852 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.801 ns/day, 4.138 hours/ns, 67.136 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8        | 4.0399     | 4.3191     |   7.5 | 90.41
+Neigh   | 0.018133   | 0.019503   | 0.021115   |   0.7 |  0.44
+Comm    | 0.11236    | 0.338      | 0.55695    |  22.7 |  7.56
+Output  | 0.00012734 | 0.00013937 | 0.00017142 |   0.0 |  0.00
+Modify  | 0.0054346  | 0.018538   | 0.038932   |   9.5 |  0.41
+Other   |            | 0.05244    |            |       |  1.17
+
+Nlocal:         281.25 ave         298 max         268 min
+Histogram: 8 10 4 2 0 3 2 11 5 3
+Nghost:        1243.96 ave        1272 max        1211 min
+Histogram: 5 3 8 6 2 0 1 4 13 6
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14198.7 ave       15071 max       13550 min
+Histogram: 16 2 5 1 1 1 7 8 4 3
+
+Total # of neighbors = 681536
+Ave neighs/atom = 50.484148
+Neighbor list builds = 10
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.101 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 59.811324 85.570301) with tilt (-34.532084 0 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.073 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40594.032      30072.335      0              0              0              0              0              0            
+       100   901.47446     -40633.578      29191.545      27266.108      26734.523      34328.477     -160.75442      169.1208      -273.34726    
+       200   890.69801     -40623.78       29142.255      27305.727      27055.834      33110.907      30.406524      20.716257     -61.829172    
+       300   901.79458     -40619.507      28990.649      27083.282      26988.253      33060.876      73.934878      3.4126903      39.193458    
+       400   892.9395      -40608.569      28972.63       27012.586      26894.37       32959.137      181.42222     -185.33704      42.48604     
+       500   906.8075      -40602.36       28976.769      27406.988      26926.86       32801.661      32.810644     -17.456127     -209.69663    
+       600   893.7593      -40598.651      28908.813      26937.717      26991.634      32758.464     -55.949605      226.45754      35.277274    
+       700   902.58486     -40573.703      29172.809      26991.034      27357.397      32927.578      192.26489     -130.90228      97.158088    
+       800   899.82694     -40598.145      29064.667      27118.011      27194.485      32999.561      151.28904     -76.690608     -127.1685     
+       900   894.90359     -40572.94       29362.979      27486.167      27540.145      32812.553     -126.13274      160.14991      155.24292    
+      1000   894.58519     -40584.396      28935.739      26978.517      27540.079      32684.165      95.427633      71.597406      264.52199    
+Loop time of 15.2777 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.655 ns/day, 4.244 hours/ns, 65.455 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 13.046     | 13.868     | 14.679     |  14.2 | 90.77
+Neigh   | 0.059618   | 0.064137   | 0.068342   |   1.3 |  0.42
+Comm    | 0.30763    | 1.1289     | 1.9519     |  48.2 |  7.39
+Output  | 0.00043181 | 0.00045716 | 0.00057974 |   0.0 |  0.00
+Modify  | 0.022852   | 0.049806   | 0.068215   |   3.6 |  0.33
+Other   |            | 0.1664     |            |       |  1.09
+
+Nlocal:         281.25 ave         301 max         263 min
+Histogram: 4 4 11 2 3 3 8 8 3 2
+Nghost:        1282.52 ave        1313 max        1253 min
+Histogram: 5 11 5 1 1 3 2 5 9 6
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14724.8 ave       15786 max       13748 min
+Histogram: 3 5 10 3 5 2 8 7 4 1
+
+Total # of neighbors = 706792
+Ave neighs/atom = 52.354963
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.073 | 3.078 | 3.082 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   894.58519     -40584.396      28935.739      0              0              0              0              0              0            
+       100   899.80598     -40588.066      28806.739      26875.471      27164.572      32371.744      127.41388      27.948598      268.69497    
+       200   901.569       -40587.057      28971.757      27018.176      26926.666      32604.474      10.724863      183.53191     -80.262907    
+       300   893.46218     -40579.282      28772.784      27067.636      27230.633      32437.747     -189.20664      211.80201     -43.177353    
+Loop time of 4.58757 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.650 ns/day, 4.248 hours/ns, 65.394 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.9306     | 4.1627     | 4.4786     |   7.7 | 90.74
+Neigh   | 0.018597   | 0.020088   | 0.02186    |   0.7 |  0.44
+Comm    | 0.07235    | 0.35211    | 0.60007    |  25.4 |  7.68
+Output  | 0.00010408 | 0.00011905 | 0.00014743 |   0.0 |  0.00
+Modify  | 0.0053542  | 0.0076586  | 0.012412   |   2.8 |  0.17
+Other   |            | 0.0449     |            |       |  0.98
+
+Nlocal:         281.25 ave         300 max         265 min
+Histogram: 4 9 7 3 1 6 5 2 9 2
+Nghost:         1283.9 ave        1317 max        1254 min
+Histogram: 5 8 7 3 1 1 8 7 5 3
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14739.2 ave       15756 max       13852 min
+Histogram: 3 13 5 3 1 5 4 4 5 5
+
+Total # of neighbors = 707484
+Ave neighs/atom = 52.406222
+Neighbor list builds = 10
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.003 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 59.811324 89.062966) with tilt (-34.532084 0 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.067 | 3.074 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40722.453      10743.454      0              0              0              0              0              0            
+       100   899.04784     -40678.359      11398.267      14929.102      14451.372      3870.6241     -167.83644      154.61636     -275.37952    
+       200   895.28222     -40630.804      11859.426      15317.343      14718.972      5126.3824     -136.53345      186.47232     -349.37531    
+       300   898.75341     -40626.633      11762.727      15162.925      14682.076      5304.7837     -164.5267      -11.315636     -212.84537    
+       400   897.98693     -40630.411      11732.526      15116.03       14704.966      5294.7741     -74.87853      -35.946034     -67.379588    
+       500   892.48902     -40623.523      11735.689      14930.195      14949.009      5643.842       160.74651     -206.85107      33.101246    
+       600   897.3905      -40611.934      11943.338      14845.286      14981.619      5807.0455      146.37092     -189.2303       39.493657    
+       700   903.39326     -40594.809      12206.335      15180.354      14788.848      6180.5824      40.159489     -228.28733      2.2369199    
+       800   893.06129     -40602.326      12106.772      15330.134      15338.429      6191.7147      156.69266     -233.17355      59.562718    
+       900   896.01862     -40594.732      12094.488      15032.78       14846.203      6291.1455     -193.29996      37.567413     -26.147543    
+      1000   903.56925     -40591.262      12289.824      15082.155      14878.116      6570.4108     -201.03464      77.95568      -21.812899    
+Loop time of 15.0753 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.731 ns/day, 4.188 hours/ns, 66.334 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.641     | 13.488     | 14.352     |  13.8 | 89.47
+Neigh   | 0.058486   | 0.063014   | 0.06724    |   1.3 |  0.42
+Comm    | 0.40743    | 1.2132     | 2.1258     |  44.7 |  8.05
+Output  | 0.00042661 | 0.00045065 | 0.00057801 |   0.0 |  0.00
+Modify  | 0.018808   | 0.028051   | 0.041217   |   4.2 |  0.19
+Other   |            | 0.2829     |            |       |  1.88
+
+Nlocal:         281.25 ave         296 max         267 min
+Histogram: 6 7 7 2 1 3 4 6 8 4
+Nghost:        1255.69 ave        1284 max        1218 min
+Histogram: 1 5 5 10 3 0 2 4 6 12
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14264.4 ave       15060 max       13360 min
+Histogram: 1 5 10 5 2 3 4 6 8 4
+
+Total # of neighbors = 684690
+Ave neighs/atom = 50.717778
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.08 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   903.56925     -40591.262      12289.824      0              0              0              0              0              0            
+       100   901.10273     -40588.769      12296.044      15408.423      15042.61       6373.193      -138.12134      62.035432     -163.45706    
+       200   885.58556     -40589.818      12217.858      15116.441      15283.18       6231.3668      84.505648     -62.924826      40.373791    
+       300   906.13944     -40592.903      12345.767      15291.955      15253.479      6238.3428      105.89364     -121.64655      66.740927    
+Loop time of 4.51827 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.737 ns/day, 4.184 hours/ns, 66.397 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.7793     | 4.0513     | 4.3367     |   7.6 | 89.67
+Neigh   | 0.01815    | 0.01962    | 0.021075   |   0.7 |  0.43
+Comm    | 0.076757   | 0.36896    | 0.65073    |  25.3 |  8.17
+Output  | 0.00013844 | 0.0001484  | 0.00018112 |   0.0 |  0.00
+Modify  | 0.005329   | 0.0077957  | 0.016709   |   3.7 |  0.17
+Other   |            | 0.07041    |            |       |  1.56
+
+Nlocal:         281.25 ave         299 max         267 min
+Histogram: 8 8 4 2 1 3 8 8 5 1
+Nghost:        1256.19 ave        1285 max        1224 min
+Histogram: 4 9 8 3 0 0 1 4 8 11
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14254.1 ave       15132 max       13486 min
+Histogram: 7 9 2 4 0 5 5 8 6 2
+
+Total # of neighbors = 684196
+Ave neighs/atom = 50.681185
+Neighbor list builds = 10
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.003 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 -1.7463327)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.079 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40685.188      19890.857      0              0              0              0              0              0            
+       100   907.27122     -40688.316      19896.128      20421.295      20667.158      18301.018     -50.982145      81.095192      3839.2334    
+       200   893.11488     -40675.71       19855.894      20909.226      20279.819      18342.678      31.931599      13.51153       3518.5913    
+       300   909.16881     -40674          19831.086      20752.971      20285.684      18670.145      98.676902      85.162941      3506.8823    
+       400   904.65207     -40653.521      19870.115      20711.88       20245.881      18538.85       159.66717      13.940856      3420.7728    
+       500   912.78431     -40647.019      19896.897      20715.189      20380.585      18763.842      226.6999       114.52542      3389.6757    
+       600   916.60321     -40635.218      20103.052      21155.802      20410.329      18527.497     -98.664556      261.84493      3500.5908    
+       700   888.23522     -40630.084      20017.446      20929.173      20633.104      18594.104      32.104043      224.56662      3550.9411    
+       800   904.78897     -40629.868      20045.97       21398.201      20036.651      18685.229      212.47542      19.603511      3193.0665    
+       900   908.98638     -40601.988      20447.536      21277.65       20458.555      18937.966      422.43867     -292.3583       3125.7251    
+      1000   896.22396     -40614.592      20127.168      21181.792      20545.041      19049.406      228.78525     -244.41458      3094.525     
+Loop time of 15.0281 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.749 ns/day, 4.174 hours/ns, 66.542 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.832     | 13.684     | 14.472     |  13.9 | 91.05
+Neigh   | 0.058739   | 0.063397   | 0.067587   |   1.3 |  0.42
+Comm    | 0.3377     | 1.0818     | 1.9463     |  46.3 |  7.20
+Output  | 0.00042357 | 0.00045749 | 0.00058051 |   0.0 |  0.00
+Modify  | 0.018131   | 0.035905   | 0.058541   |   6.8 |  0.24
+Other   |            | 0.1629     |            |       |  1.08
+
+Nlocal:         281.25 ave         298 max         267 min
+Histogram: 10 6 4 4 1 3 4 6 6 4
+Nghost:           1264 ave        1297 max        1225 min
+Histogram: 1 5 11 7 0 0 0 9 8 7
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14506.5 ave       15339 max       13714 min
+Histogram: 7 7 6 3 2 2 3 5 6 7
+
+Total # of neighbors = 696314
+Ave neighs/atom = 51.578815
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.071 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   896.22396     -40614.592      20127.168      0              0              0              0              0              0            
+       100   889.97519     -40594.739      20186.685      20963.451      20205.39       18937.306     -139.16653     -9.2686666      3054.2477    
+       200   887.5541      -40585.847      20500.175      21447.01       20620.299      19379.985     -266.99014      119.22742      3159.6789    
+       300   899.60195     -40582.093      20574.267      21521.827      20869.004      19084.024     -320.05267      168.3232       3096.2518    
+Loop time of 4.57141 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.670 ns/day, 4.233 hours/ns, 65.625 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8614     | 4.1101     | 4.4269     |   7.7 | 89.91
+Neigh   | 0.018371   | 0.019818   | 0.021446   |   0.7 |  0.43
+Comm    | 0.032867   | 0.34018    | 0.607      |  24.4 |  7.44
+Output  | 0.00010768 | 0.00012162 | 0.00016165 |   0.0 |  0.00
+Modify  | 0.029313   | 0.057222   | 0.081591   |   7.1 |  1.25
+Other   |            | 0.04399    |            |       |  0.96
+
+Nlocal:         281.25 ave         300 max         264 min
+Histogram: 2 10 6 5 0 4 7 7 3 4
+Nghost:        1266.62 ave        1294 max        1241 min
+Histogram: 12 3 6 3 0 1 4 4 7 8
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14508.8 ave       15499 max       13602 min
+Histogram: 1 9 10 2 1 4 6 7 5 3
+
+Total # of neighbors = 696420
+Ave neighs/atom = 51.586667
+Neighbor list builds = 10
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.103 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 1.7463327)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.079 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40684.665      19862.651      0              0              0              0              0              0            
+       100   906.49877     -40685.952      19819.492      21093.409      19933.56       18320.709     -102.23451      165.07611     -4306.9914    
+       200   902.77952     -40677.262      19765.83       20546.81       20598.801      18163.881     -175.13127      155.74167     -3621.1337    
+       300   894.30227     -40659.128      19916.295      20503.383      20661.769      18271.558      11.625937      41.227245     -3499.9693    
+       400   888.09705     -40657.662      19956.803      20280.899      20989.028      18583.654     -157.50728      301.40048     -3335.7621    
+       500   907.45412     -40645.257      20117.372      20673.081      21041.851      18889.641      123.31039      196.9837      -3520.6784    
+       600   900.09425     -40635.676      19976.808      20737.691      20736.286      18547.371     -74.013163      223.71548     -3549.6061    
+       700   903.57069     -40630.567      20076.947      20693.519      20709.231      18516.043     -271.9862       336.10066     -3451.1343    
+       800   894.74558     -40620.084      19955.254      20265.797      21314.7        18721.823     -48.505129      162.42931     -3124.847     
+       900   905.31119     -40629.633      19953.813      20319.121      21067.856      18412.26      -26.751536      70.359877     -3183.9494    
+      1000   900.23081     -40618.496      19957.564      19970.646      21335.335      18605.356      158.23311      138.06912     -2862.5795    
+Loop time of 15.0972 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.723 ns/day, 4.194 hours/ns, 66.237 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.821     | 13.673     | 14.486     |  14.1 | 90.57
+Neigh   | 0.058533   | 0.063465   | 0.067831   |   1.3 |  0.42
+Comm    | 0.29571    | 1.1394     | 1.9545     |  48.2 |  7.55
+Output  | 0.00043485 | 0.00046857 | 0.00074528 |   0.0 |  0.00
+Modify  | 0.026083   | 0.054782   | 0.10131    |  10.3 |  0.36
+Other   |            | 0.1656     |            |       |  1.10
+
+Nlocal:         281.25 ave         297 max         261 min
+Histogram: 2 1 8 9 4 0 2 9 9 4
+Nghost:        1266.52 ave        1296 max        1234 min
+Histogram: 1 10 9 2 2 1 2 6 6 9
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14493.3 ave       15291 max       13442 min
+Histogram: 2 1 9 9 3 0 1 9 4 10
+
+Total # of neighbors = 695678
+Ave neighs/atom = 51.531704
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.072 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   900.23081     -40618.496      19957.564      0              0              0              0              0              0            
+       100   898.59897     -40618.539      19962.91       20086.356      20944.996      18608.69      -224.34386      261.55137     -2876.9905    
+       200   900.67248     -40607.504      20100.585      20467.012      20884.618      18840.552      21.777921      127.47603     -3038.3194    
+       300   898.89348     -40617.872      19867.037      20181.983      20942.682      18813.628      376.87378     -203.13777     -3004.7508    
+Loop time of 4.51774 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.737 ns/day, 4.183 hours/ns, 66.405 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8198     | 4.105      | 4.3451     |   7.8 | 90.86
+Neigh   | 0.018279   | 0.019786   | 0.021064   |   0.7 |  0.44
+Comm    | 0.087324   | 0.33223    | 0.59334    |  26.1 |  7.35
+Output  | 0.00015147 | 0.00015773 | 0.0001984  |   0.0 |  0.00
+Modify  | 0.0053929  | 0.0072453  | 0.011891   |   2.2 |  0.16
+Other   |            | 0.05334    |            |       |  1.18
+
+Nlocal:         281.25 ave         299 max         263 min
+Histogram: 1 10 5 4 1 4 6 10 5 2
+Nghost:        1265.04 ave        1294 max        1232 min
+Histogram: 2 7 6 7 2 2 2 5 8 7
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14500.8 ave       15394 max       13485 min
+Histogram: 1 7 6 6 2 3 2 10 7 4
+
+Total # of neighbors = 696036
+Ave neighs/atom = 51.558222
+Neighbor list builds = 10
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.099 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 -1.7463327 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.079 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40685.345      19868.884      0              0              0              0              0              0            
+       100   906.61609     -40680.966      19906.666      20689.058      20390.769      18304.493     -568.27047      4271.5577     -239.99101    
+       200   889.02451     -40660.783      19894.33       20726.584      20514.875      18313.333      261.41131      3694.4679     -59.135739    
+       300   898.1903      -40659.936      19853.726      20376.448      20534.752      18781.572      126.92925      3676.5164      27.397467    
+       400   907.00665     -40656.239      19908.259      20752.846      20526.096      18810.399      276.53978      3397.3554     -133.06137    
+       500   909.3285      -40647.477      20041.843      20769.322      20417.098      18871.772      422.63816      3301.8915      24.560851    
+       600   897.83723     -40653.604      19868.216      20654.248      20760.056      18742.843      461.94836      3208.6819      132.789      
+       700   897.30537     -40636.946      19996.454      20336.741      20731.505      18773.548      561.25949      3053.3684      157.12093    
+       800   899.84088     -40631.516      20026.697      20678.603      20736.708      18850.467      515.12328      3043.8703     -39.087909    
+       900   911.41368     -40623.488      20077.328      20614.743      20773.078      18656.723      461.04016      2966.5227     -5.5315075    
+      1000   897.98094     -40621.296      19924.841      20693.697      20548.596      18753.339      135.8116       3409.3397     -69.694163    
+Loop time of 15.2383 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.670 ns/day, 4.233 hours/ns, 65.624 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.865     | 13.679     | 14.417     |  13.7 | 89.77
+Neigh   | 0.059218   | 0.0634     | 0.067687   |   1.3 |  0.42
+Comm    | 0.46302    | 1.2315     | 2.0706     |  45.2 |  8.08
+Output  | 0.00040733 | 0.00044496 | 0.00071413 |   0.0 |  0.00
+Modify  | 0.018223   | 0.03967    | 0.083445   |   9.9 |  0.26
+Other   |            | 0.2242     |            |       |  1.47
+
+Nlocal:         281.25 ave         299 max         266 min
+Histogram: 5 10 3 6 0 2 9 7 5 1
+Nghost:        1262.92 ave        1296 max        1235 min
+Histogram: 8 8 8 0 0 1 4 12 5 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14489.2 ave       15370 max       13734 min
+Histogram: 8 8 5 3 0 4 5 3 10 2
+
+Total # of neighbors = 695480
+Ave neighs/atom = 51.517037
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.071 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   897.98094     -40621.296      19924.841      0              0              0              0              0              0            
+       100   899.26145     -40600.1        20175.744      20495.572      20836.659      18766.007      32.450255      3399.2261      234.35298    
+       200   899.06765     -40621.137      19884.099      20807.767      20562.353      18735.622      59.589127      3185.1465     -133.89576    
+       300   902.76969     -40605.861      20167.309      20720.571      20390.662      18882.048      378.74082      2932.3978     -155.42775    
+Loop time of 4.56792 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.674 ns/day, 4.230 hours/ns, 65.675 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8344     | 4.1059     | 4.3773     |   7.6 | 89.89
+Neigh   | 0.016348   | 0.017791   | 0.019045   |   0.7 |  0.39
+Comm    | 0.07027    | 0.3473     | 0.64435    |  25.3 |  7.60
+Output  | 0.00011911 | 0.00013473 | 0.00016717 |   0.0 |  0.00
+Modify  | 0.032087   | 0.043236   | 0.059825   |   5.2 |  0.95
+Other   |            | 0.05352    |            |       |  1.17
+
+Nlocal:         281.25 ave         297 max         261 min
+Histogram: 1 5 4 6 4 5 4 5 9 5
+Nghost:        1264.44 ave        1295 max        1232 min
+Histogram: 3 8 9 3 1 0 4 4 11 5
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14505.4 ave       15303 max       13350 min
+Histogram: 1 1 7 7 4 5 2 7 8 6
+
+Total # of neighbors = 696260
+Ave neighs/atom = 51.574815
+Neighbor list builds = 9
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.033 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 1.7463327 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.079 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40684.441      19884.966      0              0              0              0              0              0            
+       100   902.241       -40668.243      19959.619      20786.629      20217.61       18368.695      190.629       -3947.0623     -302.68531    
+       200   891.07095     -40666.888      19932.157      20942.609      20412.211      18272.591     -267.14183     -3404.8394     -288.7873     
+       300   904.76776     -40666.699      19906.62       20581.191      20749.803      18454.178     -543.11859     -3172.454      -46.022674    
+       400   896.57097     -40650.857      19997.229      20578.715      20830.176      18457.312     -28.850152     -3488.9698      83.308614    
+       500   895.51115     -40624.42       20333.253      21432.815      20396.555      18715.218     -204.45221     -3377.2935     -188.55424    
+       600   896.82457     -40619.952      20236.553      21278.28       20756.953      18542.464     -263.39141     -3312.7275     -110.70225    
+       700   898.7631      -40637.523      19987.801      20939.522      20761.831      18608.493     -227.99005     -3315.1676     -7.0696469    
+       800   902.59063     -40615.792      20207.271      20766.137      20813.01       18576.307     -213.24797     -3193.2123     -107.84458    
+       900   905.29538     -40606.738      20227.732      20990.322      20796.815      18797.329     -233.08421     -3157.2434     -227.98036    
+      1000   888.50045     -40608.219      20215.759      20927.935      20792.854      18926.735     -143.31075     -3175.4212      26.981308    
+Loop time of 15.156 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.701 ns/day, 4.210 hours/ns, 65.980 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.936     | 13.682     | 14.433     |  13.8 | 90.28
+Neigh   | 0.059141   | 0.063257   | 0.067715   |   1.3 |  0.42
+Comm    | 0.50546    | 1.1793     | 1.9026     |  42.7 |  7.78
+Output  | 0.00046802 | 0.00049798 | 0.00061708 |   0.0 |  0.00
+Modify  | 0.018307   | 0.026139   | 0.038418   |   3.4 |  0.17
+Other   |            | 0.2044     |            |       |  1.35
+
+Nlocal:         281.25 ave         297 max         267 min
+Histogram: 5 10 5 2 3 2 2 6 8 5
+Nghost:        1264.67 ave        1298 max        1232 min
+Histogram: 4 6 10 4 0 0 4 10 9 1
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14498.2 ave       15297 max       13767 min
+Histogram: 7 9 5 2 2 3 2 5 6 7
+
+Total # of neighbors = 695912
+Ave neighs/atom = 51.549037
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.071 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   888.50045     -40608.219      20215.759      0              0              0              0              0              0            
+       100   895.55408     -40593.947      20252.813      21026.224      20693.686      18802.69      -488.80359     -2855.6955      33.652628    
+       200   906.4696      -40597.086      20164.178      20679.454      21060.586      18692.33      -25.995047     -2938.006       172.2997     
+       300   899.24835     -40611.739      19890.436      20697.522      20841.159      18603.877     -102.12025     -3162.4318      73.976599    
+Loop time of 4.51423 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.742 ns/day, 4.180 hours/ns, 66.457 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.877      | 4.1075     | 4.3703     |   7.6 | 90.99
+Neigh   | 0.018556   | 0.019858   | 0.021366   |   0.7 |  0.44
+Comm    | 0.048627   | 0.33535    | 0.57563    |  26.6 |  7.43
+Output  | 0.00012553 | 0.00014358 | 0.00017176 |   0.0 |  0.00
+Modify  | 0.0053462  | 0.0070228  | 0.010364   |   1.7 |  0.16
+Other   |            | 0.04434    |            |       |  0.98
+
+Nlocal:         281.25 ave         302 max         266 min
+Histogram: 7 9 3 4 2 7 7 6 2 1
+Nghost:        1264.56 ave        1292 max        1232 min
+Histogram: 2 8 8 3 2 1 2 3 10 9
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14503.3 ave       15634 max       13705 min
+Histogram: 7 8 6 2 4 7 5 7 1 1
+
+Total # of neighbors = 696158
+Ave neighs/atom = 51.567259
+Neighbor list builds = 10
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.059 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+WARNING: Triclinic box skew is large (../domain.cpp:228)
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-35.728311 0 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.079 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40683.765      19889.175      0              0              0              0              0              0            
+       100   890.23672     -40679          19648.095      20642.296      20245.745      18185.872      3367.372      -170.75362     -325.53138    
+       200   888.96636     -40671.315      19760.2        20714.804      20226.02       18236.169      2517.2599      252.03248     -161.71824    
+       300   903.23164     -40654.45       19957.497      20882.005      20576.228      18352.737      2524.0542      223.16936     -178.64056    
+       400   902.78986     -40653.696      20013.803      20837.448      20578.454      18523.451      1986.817       451.05126     -160.73342    
+       500   895.95672     -40661.584      19754.582      20428.674      21065.165      18544.389      2208.1136      413.18431      75.875592    
+       600   904.38746     -40639.247      20007.014      20370.724      20753.469      18485.8        2443.8474      413.91348      58.439301    
+       700   909.32062     -40625.117      20197.26       20618.932      21080.469      18869.676      2498.8859      583.05224      198.00094    
+       800   898.18551     -40627.757      20043.172      20742.407      21073.784      18595.884      2315.3016      429.46172      70.130636    
+       900   881.72633     -40616.032      19923.096      20519.07       21024.058      18393.13       1959.7159      539.01097      84.90424     
+      1000   909.61285     -40625.621      19916.057      20379.461      20666.118      18812.836      2093.7083      429.07055      83.86993     
+Loop time of 15.0998 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.722 ns/day, 4.194 hours/ns, 66.226 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.829     | 13.671     | 14.455     |  14.3 | 90.54
+Neigh   | 0.058818   | 0.063576   | 0.067718   |   1.3 |  0.42
+Comm    | 0.38368    | 1.1436     | 1.9552     |  46.4 |  7.57
+Output  | 0.0004112  | 0.00043916 | 0.00055699 |   0.0 |  0.00
+Modify  | 0.037381   | 0.045912   | 0.057853   |   2.2 |  0.30
+Other   |            | 0.1753     |            |       |  1.16
+
+Nlocal:         281.25 ave         299 max         265 min
+Histogram: 7 5 7 2 2 4 4 10 3 4
+Nghost:        1270.73 ave        1299 max        1241 min
+Histogram: 4 6 9 5 0 0 4 6 10 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14492.5 ave       15418 max       13556 min
+Histogram: 5 4 7 6 1 4 5 5 7 4
+
+Total # of neighbors = 695640
+Ave neighs/atom = 51.528889
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.071 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   909.61285     -40625.621      19916.057      0              0              0              0              0              0            
+       100   897.92662     -40606.5        20062.895      20812.602      20613.007      18625.599      2288.552       370.91797     -208.09908    
+       200   906.8558      -40605.077      20167.729      20782.083      20809.48       18803.756      2238.2341      306.75435     -147.20121    
+       300   901.32116     -40608.196      20133.806      20759.525      20681.224      18806.841      2320.9278      343.56792     -144.75071    
+Loop time of 4.66846 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.552 ns/day, 4.323 hours/ns, 64.261 timesteps/s
+99.5% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8398     | 4.1095     | 4.4531     |   8.1 | 88.03
+Neigh   | 0.016625   | 0.017946   | 0.019392   |   0.7 |  0.38
+Comm    | 0.11651    | 0.43174    | 0.65007    |  23.4 |  9.25
+Output  | 0.00012267 | 0.00013179 | 0.00016776 |   0.0 |  0.00
+Modify  | 0.0053302  | 0.0076502  | 0.013498   |   2.1 |  0.16
+Other   |            | 0.1015     |            |       |  2.17
+
+Nlocal:         281.25 ave         298 max         265 min
+Histogram: 5 5 6 6 1 4 7 6 5 3
+Nghost:        1270.17 ave        1302 max        1240 min
+Histogram: 5 7 6 4 2 3 1 11 7 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14501.6 ave       15441 max       13637 min
+Histogram: 8 2 7 4 3 3 7 6 5 3
+
+Total # of neighbors = 696078
+Ave neighs/atom = 51.561333
+Neighbor list builds = 9
+Dangerous builds = 0
+Reading restart file ...
+  restart file = 24 Mar 2022, LAMMPS = 24 Mar 2022
+  restoring atom style atomic from restart
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-34.532084 0 0)
+  4 by 3 by 4 MPI processor grid
+  pair style nep stores no restart info
+  13500 atoms
+  read_restart CPU = 0.004 seconds
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+Changing box ...
+  triclinic box = (0 0 0) to (69.064169 59.811324 87.316633) with tilt (-33.335858 0 0)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7
+  ghost atom cutoff = 7
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair nep, perpetual
+      attributes: full, newton on
+      pair build: full/nsq
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.065 | 3.068 | 3.078 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   905.524       -40685.43       19880.573      0              0              0              0              0              0            
+       100   897.08029     -40684.816      19660.604      20593.221      20387.851      18225.467     -3718.5475      519.36442     -287.05218    
+       200   905.22834     -40670.109      19734.363      20188.651      20421.774      17966.252     -2365.6902     -263.98104     -101.17552    
+       300   905.10434     -40652.172      19827.396      20320.244      20774.183      18171.672     -2073.9739     -349.62555     -71.438061    
+       400   914.75936     -40650.559      19845.608      20472.864      20482.437      18330.661     -1977.5888     -498.16745     -210.07676    
+       500   902.48434     -40651.194      19755.672      20357.521      20579.475      18341.501     -2001.3227     -559.89198     -105.98228    
+       600   901.37086     -40663.934      19652.236      20637.505      20447.126      18294.887     -1949.389      -396.95213     -81.010083    
+       700   902.37532     -40637.622      19989.024      20607.245      20496.099      18548.209     -2094.8804     -162.75321     -168.15271    
+       800   902.32311     -40623.55       20031.233      20812.913      20328.641      18568.657     -2360.9691      0.74661752    -262.80741    
+       900   898.66239     -40638.805      19785.726      20692.867      20585.977      18665.954     -1998.2248     -243.23542     -141.76763    
+      1000   904.72549     -40620.709      20053.289      20393.068      20652.107      18630.892     -1926.0256     -192.39942     -121.63229    
+Loop time of 15.2317 on 48 procs for 1000 steps with 13500 atoms
+
+Performance: 5.672 ns/day, 4.231 hours/ns, 65.653 timesteps/s
+99.6% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 12.74      | 13.67      | 14.563     |  14.6 | 89.75
+Neigh   | 0.058053   | 0.063122   | 0.067979   |   1.3 |  0.41
+Comm    | 0.28653    | 1.2208     | 2.2171     |  49.2 |  8.01
+Output  | 0.00044271 | 0.00047307 | 0.00060704 |   0.0 |  0.00
+Modify  | 0.018204   | 0.0367     | 0.066107   |   8.6 |  0.24
+Other   |            | 0.2402     |            |       |  1.58
+
+Nlocal:         281.25 ave         299 max         263 min
+Histogram: 2 4 9 7 2 2 8 6 5 3
+Nghost:        1259.71 ave        1297 max        1228 min
+Histogram: 5 10 9 0 0 3 3 10 7 1
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14487.1 ave       15408 max       13425 min
+Histogram: 2 3 5 8 6 3 3 8 6 4
+
+Total # of neighbors = 695380
+Ave neighs/atom = 51.50963
+Neighbor list builds = 32
+Dangerous builds = 0
+Use the NEP4 potential with 2 atom types.
+    type 0( Mg with Z = 12).
+    type 1( Bi with Z = 83).
+    has universal ZBL with inner cutoff 0.75 A and outer cutoff 1.5 A.
+    radial cutoff = 6 A.
+    angular cutoff = 5 A.
+    n_max_radial = 4.
+    n_max_angular = 4.
+    basis_size_radial = 10.
+    basis_size_angular = 10.
+    l_max_3body = 4.
+    l_max_4body = 2.
+    l_max_5body = 0.
+    ANN = 30-80-1.
+    number of neural network parameters = 5121.
+    number of descriptor parameters = 440.
+    total number of parameters = 5561.
+WARNING: New thermo_style command, previous thermo_modify settings will be lost (../output.cpp:896)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.066 | 3.072 | 3.081 Mbytes
+   Step          Temp          PotEng         Press         f_avp[1]       f_avp[2]       f_avp[3]       f_avp[4]       f_avp[5]       f_avp[6]   
+         0   904.72549     -40620.709      20053.289      0              0              0              0              0              0            
+       100   905.61246     -40629.04       19971.51       20480.207      20733.779      18753.013     -2085.0197     -154.44811     -87.592085    
+       200   905.27312     -40592.189      20399.754      20692.923      20720.938      19134.649     -1822.6254     -321.65859     -216.24648    
+       300   900.56594     -40606.741      20258.261      20806.039      20970.142      19015.719     -2069.631      -290.8039      -96.249598    
+Loop time of 4.48905 on 48 procs for 300 steps with 13500 atoms
+
+Performance: 5.774 ns/day, 4.157 hours/ns, 66.829 timesteps/s
+99.7% CPU use with 48 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8265     | 4.1035     | 4.3872     |   7.9 | 91.41
+Neigh   | 0.016294   | 0.01771    | 0.019083   |   0.7 |  0.39
+Comm    | 0.052882   | 0.32391    | 0.61512    |  27.1 |  7.22
+Output  | 0.0001032  | 0.00011351 | 0.00015055 |   0.0 |  0.00
+Modify  | 0.0053395  | 0.0081836  | 0.015439   |   3.0 |  0.18
+Other   |            | 0.03559    |            |       |  0.79
+
+Nlocal:         281.25 ave         298 max         264 min
+Histogram: 2 6 11 1 4 2 5 9 4 4
+Nghost:         1257.9 ave        1290 max        1217 min
+Histogram: 1 3 10 8 2 0 2 6 9 7
+Neighs:              0 ave           0 max           0 min
+Histogram: 48 0 0 0 0 0 0 0 0 0
+FullNghs:      14508.9 ave       15410 max       13662 min
+Histogram: 6 2 11 3 2 3 6 6 7 2
+
+Total # of neighbors = 696428
+Ave neighs/atom = 51.587259
+Neighbor list builds = 9
+Dangerous builds = 0
+=========================================
+Components of the Elastic Constant Tensor
+=========================================
+Elastic Constant C11all = 58.2590817805198 GPa
+Elastic Constant C22all = 59.4362789356949 GPa
+Elastic Constant C33all = 65.4985094506419 GPa
+Elastic Constant C12all = 37.4320243157984 GPa
+Elastic Constant C13all = 29.0329150222119 GPa
+Elastic Constant C23all = 29.6848983330137 GPa
+Elastic Constant C44all = 15.252506617377 GPa
+Elastic Constant C55all = 15.2370742109484 GPa
+Elastic Constant C66all = 10.9763968913385 GPa
+Elastic Constant C14all = 2.24042874271974 GPa
+Elastic Constant C15all = -0.0425570976949285 GPa
+Elastic Constant C16all = -0.54630111946127 GPa
+Elastic Constant C24all = -0.803093405828447 GPa
+Elastic Constant C25all = -0.249438074531205 GPa
+Elastic Constant C26all = -0.659446435942657 GPa
+Elastic Constant C34all = 0.200596694616431 GPa
+Elastic Constant C35all = 0.764523674900776 GPa
+Elastic Constant C36all = -0.629972526782189 GPa
+Elastic Constant C45all = 0.177570774359791 GPa
+Elastic Constant C46all = -0.931784466493923 GPa
+Elastic Constant C56all = 1.39404111347278 GPa
+=========================================
+Average properties for a cubic crystal
+=========================================
+Bulk Modulus = 41.7215050565449 GPa
+Shear Modulus 1 = 13.8219925732213 GPa
+Shear Modulus 2 = 14.5073387493055 GPa
+Poisson Ratio = 0.344199045739112
+Total wall time: 0:04:23

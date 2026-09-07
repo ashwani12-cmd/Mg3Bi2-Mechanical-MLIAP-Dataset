@@ -32,14 +32,25 @@ Mg3Bi2-Mechanical-MLIAP-Dataset/
 ├── scripts/                     MTP_xyz_format.ipynb — format conversion
 │                                make_displaced.py    — configuration generator (QE)
 ├── train/                       NEP training run: nep.in, nep.txt, loss.out, submit.sh
+├── analysis/                    Downstream property checks on the trained NEP potential
+│   ├── band_gap/                QE band structure (DFT)
+│   ├── dispersion/              Phonon dispersion, DFT (phonopy) vs. NEP
+│   ├── nep_elastic_const/       Elastic tensor vs. temperature (LAMMPS + NEP)
+│   ├── gruneisen/               Grüneisen parameter, phonon DOS
+│   ├── thermal_expansion/       NPT runs at 0–9 GPa (LAMMPS + NEP)
+│   └── Defect_formation_energy/ NEB diffusion barriers, Arrhenius/MSD analysis
 ├── figures/                     (empty — placeholder)
-├── validation/                  (empty — placeholder)
+├── validation/                  (empty — placeholder; subfolders mirror analysis/ categories
+│                                and are not currently populated)
 ├── docs/                        (empty — placeholder)
 ├── nep_training/                (empty — placeholder)
 └── primitive_cell/              (empty — placeholder)
 ```
 
 Directories marked *placeholder* are currently empty.
+
+`analysis/` holds validation studies run **using** the fitted NEP potential (`train/nep.txt`),
+not raw DFT training data — see [Analysis](#analysis-analysis) below.
 
 ---
 
@@ -152,6 +163,28 @@ supercell, optionally strains it onto a 24-point (a, c) grid covering T = 300–
 P = 0–9 GPa (`--cover-lattices`), and applies a random per-atom displacement with a per-folder
 amplitude cap drawn uniformly in [`--min-disp`, `--max-disp`]. The random seed defaults to 12,
 so the sets are reproducible.
+
+---
+
+## Analysis (`analysis/`)
+
+Downstream property checks run **with the fitted NEP potential** (`train/nep.txt`), used to
+validate it against DFT and, where available, against known physics rather than to generate
+further training data.
+
+| Folder | Content |
+|---|---|
+| `band_gap/` | QE band structure calculation (DFT reference, not NEP) |
+| `dispersion/` | Phonon dispersion — DFT (phonopy, `dft_dispersion/`) vs. NEP (`nep_dispersion/`) |
+| `nep_elastic_const/` | Elastic tensor vs. temperature, 300–1000 K, via LAMMPS + NEP (`elastic_T/`), plus a single-point LAMMPS elastic run (`nep_lammps/`). Everything here is NEP+LAMMPS — no DFT elastic-constant calculation exists; the `.pwi` files inside `nep_lammps/` are QE inputs used only to relax the starting cell before conversion to LAMMPS format |
+| `gruneisen/` | Grüneisen parameter and phonon DOS from the NEP potential |
+| `thermal_expansion/` | LAMMPS NPT runs at 0, 1, 3, 5, 7, 9 GPa |
+| `Defect_formation_energy/` | NEB migration barriers (`neb_all_paths/`) and NEP-driven MD diffusion (Arrhenius, MSD) at T = 300–700 K, 5 runs each |
+
+These folders are **not** part of the training/export pipeline described above and are not
+covered by the LFS filter beyond the `*.json`/`*.xyz`/`*.cfg`/`*.npy` patterns already in
+`.gitattributes` — check individual file sizes before committing (QE scratch output such as
+`band_gap/tmp/*.wfc*` is gitignored and should never be committed).
 
 ---
 

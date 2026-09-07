@@ -1,0 +1,38 @@
+&CONTROL
+   calculation      = 'scf'
+   verbosity        = 'high'
+   restart_mode     = 'from_scratch'
+   tstress          = .true.
+   tprnfor          = .true.
+   outdir           = './'
+   etot_conv_thr    = 1e-10
+   forc_conv_thr    = 1e-10
+   disk_io          = 'none'
+   pseudo_dir       = '/home/IITB/multiscale-mechanics/amit.k.singh/PP/LDA_ONCV/'
+/
+&SYSTEM
+   ibrav            = 0
+   nat              = 90
+   ntyp             = 2
+   ecutwfc          = 160.0
+   occupations      = 'smearing'
+   degauss          = 0.01
+   smearing         = 'mp'
+/
+&ELECTRONS
+   electron_maxstep = 400
+   conv_thr         = 1e-10
+   mixing_beta      = 0.3
+/
+&IONS
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+K_POINTS automatic
+4 4 4  0 0 0
+
+

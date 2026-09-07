@@ -1,0 +1,57 @@
+&control
+  calculation = 'bands',
+  restart_mode = 'from_scratch',
+  prefix = 'mg3bi2',
+  outdir = './tmp/'
+  tstress          = .true.
+  tprnfor          = .true.
+  etot_conv_thr    = 1e-10
+  forc_conv_thr    = 1e-10
+  pseudo_dir       = '/home/IITB/multiscale-mechanics/amit.k.singh/PP/LDA_ONCV/'   
+  verbosity = 'high'
+/
+
+&system
+  ibrav = 0,
+  nat = 5,
+  ntyp = 2,
+  ecutwfc = 160,
+  nbnd = 50,
+  occupations = 'smearing',
+  smearing = 'mp',
+  degauss = 0.01
+ /
+
+&electrons
+   electron_maxstep = 400
+   conv_thr         = 1e-08
+   mixing_beta      = 0.3
+ /
+
+ATOMIC_SPECIES
+Mg 24.305 Mg.UPF
+Bi 208.9804 Bi.UPF
+
+CELL_PARAMETERS (angstrom)
+   4.604300551  -0.000000000   0.000000000
+  -2.302150276   3.987441244  -0.000000000
+   0.000000000   0.000000000   7.276439532
+
+ATOMIC_POSITIONS (angstrom)
+Mg              -0.0000000230        2.6582941761        4.5726561144
+Mg               2.3021502988        1.3291470681        2.7037834179
+Mg              -0.0000000000        0.0000000000        0.0000000000
+Bi              -0.0000000230        2.6582941761        1.5984877919
+Bi               2.3021502988        1.3291470681        5.6779517404
+
+
+K_POINTS {crystal_b}
+8
+  0.000000  0.000000  0.000000  20  ! Gamma
+  0.500000  0.000000  0.000000  20  ! M
+  0.333333  0.333333  0.000000  20  ! K
+  0.000000  0.000000  0.000000  20  ! Gamma
+  0.000000  0.000000  0.500000  20  ! A
+  0.500000  0.000000  0.500000  20  ! L
+  0.333333  0.333333  0.500000  20  ! H
+  0.000000  0.000000  0.500000  20  ! A

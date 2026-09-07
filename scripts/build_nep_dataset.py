@@ -95,7 +95,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--datadir", default="data")
     ap.add_argument("--outdir", default="dataset/gpumd")
-    ap.add_argument("--exclude", default="pressure_strain_disp",
+    #ap.add_argument("--exclude", default="pressure_strain_disp",
+    ap.add_argument("--exclude", default="",
                     help="comma-separated category names to skip")
     ap.add_argument("--test-frac", type=float, default=0.10)
     ap.add_argument("--seed", type=int, default=0)

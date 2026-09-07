@@ -1,0 +1,17 @@
+a0=4.602451 A
+c0=7.278018 A
+V0=133.512545 A3
+K=42.6334 GPa
+G=18.6775 GPa
+E=48.8927 GPa
+nu=0.308864
+theta_D=181.94 K
+vl=3106.14 m/s
+vt=1633.47 m/s
+vD=1826.61 m/s
+gamma_macro=1.791480
+gamma_thermo=1.364747
+Cauchy=18.1980 GPa
+Zener=1.041842
+AU=0.293930
+Hv=4.1695 GPa
