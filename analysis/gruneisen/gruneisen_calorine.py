@@ -196,8 +196,8 @@ def main():
     ap.add_argument('--pwi',   default='espresso.pwi')
     ap.add_argument('--eps',   type=float, default=0.001,
                     help='Strain magnitude for elastic constants (default: 0.001)')
-    ap.add_argument('--rho',   type=float, default=7000,
-                    help='Density kg/m³ (default: 7000 for Mg3Bi2)')
+    ap.add_argument('--rho',   type=float, default=None,
+                    help='Density kg/m³ (default: computed from the relaxed cell)')
     ap.add_argument('--alpha-v', type=float, default=65.18e-6,
                     help='Volumetric thermal expansion at 0GPa (K⁻¹, default: 65.18e-6)')
     ap.add_argument('--temp',  type=float, default=300)
@@ -226,8 +226,13 @@ def main():
     L=np.linalg.norm(prim.cell,axis=1)
     V0=prim.get_volume()
     fmax_act=np.sqrt((prim.get_forces()**2).sum(axis=1).max())
+    # density from the relaxed cell (mass in amu -> kg, V in Å³ -> m³)
+    rho = (args.rho if args.rho is not None
+           else prim.get_masses().sum() * 1.66053906660e-27 / (V0 * 1e-30))
     print(f"  a={L[0]:.5f} Å  c={L[2]:.5f} Å  c/a={L[2]/L[0]:.5f}")
     print(f"  V={V0:.5f} Å³  |F|max={fmax_act:.2e} eV/Å")
+    print(f"  ρ={rho:.2f} kg/m³"
+          + ("  (user-supplied)" if args.rho is not None else "  (from cell mass/volume)"))
 
     # ── Step 2: Elastic constants ─────────────────────────────────────────────
     print(f"\nStep 2: Elastic stiffness tensor (ε={args.eps})")
@@ -261,7 +266,7 @@ def main():
     print("\nStep 3: VRH averages + Debye + Grüneisen")
     print("-"*45)
     vrh=vrh_moduli(C)
-    deb=debye_props(vrh['K'],vrh['G'],args.rho,len(prim),V0)
+    deb=debye_props(vrh['K'],vrh['G'],rho,len(prim),V0)
 
     # Macroscopic Grüneisen
     kB_J=1.380649e-23; N_m3=len(prim)/(V0*1e-30)
@@ -282,7 +287,7 @@ def main():
     print(f"    G/K = {vrh['G']/vrh['K']:.4f}  "
           f"→ {'ductile' if vrh['G']/vrh['K']<0.571 else 'brittle'} (Pugh)")
 
-    print(f"\n  Sound velocities (ρ={args.rho} kg/m³):")
+    print(f"\n  Sound velocities (ρ={rho:.1f} kg/m³):")
     print(f"    vl  = {deb['vl']:.1f} m/s")
     print(f"    vt  = {deb['vt']:.1f} m/s")
     print(f"    vD  = {deb['vD']:.1f} m/s")
