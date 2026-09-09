@@ -1,0 +1,56 @@
+# elastic_from_phonons.py  --  Mg3Bi2 NEP
+# generated 2026-09-10
+# command:
+#   python3 elastic_from_phonons.py --nep nep_...generation300000.txt --pwi espresso.pwi \
+#       --cij-strain 69.48,35.76,23.98,77.38,17.56,2.70   (NEP finite-strain, from calorine)
+# supercell 5x5x4 (basal C_ij need >=4x4x3 to converge; 3x3x2 gives C66 ~2x low)
+# density rho = 6105 kg/m3  (computed from the relaxed cell; note gruneisen_calorine.py
+#   default --rho 7000 is ~15% high -> its v_l/v_t/theta_D come out ~7% low)
+
+relaxing primitive cell at the NEP minimum ...
+  a=4.60245  c=7.27802 A   c/a=1.58134   V=133.5126 A^3
+  primitive: 5 atoms   rho = 6105.2 kg/m^3
+acoustic group velocities  (|q| = 0.001) :
+  [001]  vt1= 1672.2  vt2= 1672.2  vL= 3554.6  m/s
+  [100]  vt1= 1517.0  vt2= 1787.4  vL= 3362.9  m/s
+  [101]  vt1= 1733.2  vt2= 2003.7  vL= 3306.0  m/s
+  [010]  vt1= 1658.6  vt2= 1684.7  vL= 3374.6  m/s
+  [110]  vt1= 1593.7  vt2= 1778.9  vL= 3368.8  m/s
+  [011]  vt1= 1786.9  vt2= 2018.6  vL= 3246.6  m/s
+  [111]  vt1= 1587.3  vt2= 2014.7  vL= 3337.3  m/s
+global Christoffel fit residual RMS = 0.62 GPa (55 directions)
+NOTE: phonon-route C_ij from acoustic group velocities near Gamma (no non-analytic
+      correction). With a converged FC supercell (>=4x4x3) it matches the finite-
+      strain C_ij to a few GPa; C13 is the least reliable. theta_D below is the
+      headline independent cross-check.
+============================================================================
+ELASTIC CONSTANTS  (GPa)
+============================================================================
+        phonon high-sym       phonon LSQ      strain C_ij              DFT
+C11               69.05            69.32            69.48            67.93
+C12               40.95            35.63            35.76            35.93
+C13               22.56            22.28            23.98            22.98
+C33               77.14            78.23            77.38            78.50
+C44               17.07            18.48            17.56            15.53
+C14                0.00             2.59             2.70             3.00
+C66               14.05            16.84            16.86            16.00
+============================================================================
+VRH MODULI + DEBYE  (theta_D from elastic v_D)
+============================================================================
+            phonon high-sym       phonon LSQ      strain C_ij              DFT
+K                   42.9741          41.9030          42.6320          42.0118
+G                   17.6257          19.3055          18.7104          17.4873
+E                   46.5174          50.2061          48.9676          46.0697
+nu                   0.3196           0.3003           0.3086           0.3172
+v_l m/s              3299.7           3328.6           3327.0           3271.2
+v_t m/s              1699.1           1778.2           1750.6           1692.4
+v_D m/s              1902.7           1986.3           1957.5           1894.6
+theta_D K             189.5            197.9            195.0            188.7
+============================================================================
+DEBYE TEMPERATURE -- independent routes
+============================================================================
+  from elastic v_D (phonon LSQ C_ij) :    197.9 K
+  from elastic v_D (strain C_ij)     :    195.0 K
+  from elastic v_D (DFT C_ij)        :    188.7 K
+  direct acoustic-branch average     :    195.1 K   (v_l=3364, v_t=1751, v_D=1959 m/s)
+  phonon-DOS 2nd moment (thermodynamic):   285.0 K   (includes optical modes -> higher)
